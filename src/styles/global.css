@@ -5,6 +5,8 @@
   --black: #000000;
   --hr-color: rgba(0, 0, 0, 0.10);
   --gray: #9797af;
+  --smoky: #F6F6FA;
+  --red-accent: #ff3b30;
 
   /* paddings */
   --padding-mobile: 16px;
@@ -23,7 +25,7 @@ body {
 
 main {
   border-radius: 24px;
-  background-color: var(--white);
+  background-color: var(--smoky);
 }
 
 main > section {
