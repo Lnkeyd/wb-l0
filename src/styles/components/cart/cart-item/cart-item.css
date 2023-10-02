@@ -1,0 +1,140 @@
+.cart-item-wrapper {
+  display: grid;
+  grid-template-columns: 81px 1fr;
+  /* grid-template-rows: 100px 100px 100x; */
+}
+
+.cart-item__hr {
+  height: 1px;
+  width: 100%;
+
+  margin-top: 1px;
+  margin-bottom: 12px;
+  background-color: var(--hr-color);
+  /* margin-bottom: 12px; */
+}
+
+.cart-item__image {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  width: 81px;
+  height: 107px;
+
+  background-image: url("../../../../../public/images/t-shirt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: relative;
+}
+
+.cart-item__check {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+.cart-item__size {
+  position: absolute;
+  top: 81px;
+  left: 4px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 6px;
+
+  color: var(--black);
+
+  /* Мобильный сайт/Body-2 */
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.cart-item__price {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-left: 16px;
+
+  color: var(--black);
+
+  margin-top: 1px;
+  /* Сайт/H4 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+
+  /* background-color: blue; */
+}
+
+.cart-item__price_old {
+  color: var(--gray);
+  margin-left: 5px;
+  position: relative;
+
+  text-decoration: dashed;
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.cart-item__price_old::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    bottom: 6px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray);
+}
+
+.cart-item__price_old::after {
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-image: url('../../../../../public/images/icons/dash.svg');
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+.cart-item-description {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  /* background-color: green; */
+}
+
+.cart-item-buttons-wrap {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  /* background-color: peru; */
+}
+
+/* 
+    [a] [b]
+    [a] [c]
+    [ d d ]
+*/

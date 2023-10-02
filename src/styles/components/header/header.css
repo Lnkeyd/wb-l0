@@ -1,0 +1,13 @@
+@import url('./__logo/header__logo.css');
+@import url('./__menu/header__menu.css');
+@import url('./__search/header__search.css');
+
+header {
+  display: flex;
+  height: 56px;
+  padding: 0px 13px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: var(--violet);
+}

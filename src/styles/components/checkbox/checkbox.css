@@ -1,0 +1,50 @@
+.check-label {
+  margin-bottom: 16px;
+  padding-left: 33px;
+  display: block;
+  pointer-events: none;
+
+  color: var(--black);
+
+  /* Сайт/Body */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.check__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 33px;
+}
+
+.check-style {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url("../../../../public/images/icons/checkbox-unchecked.svg");
+  margin-left: -33px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.check__input:checked + .check-style {
+  background-image: url("../../../../public/images/icons/checkbox-checked.svg");
+}
+
+.check__input:focus + .check-style {
+  background-image: url("../../../../public/images/icons/checkbox-unchecked-focused.svg");
+}
+
+.check__input:checked:focus + .check-style {
+  background-image: url("../../../../public/images/icons/checkbox-checked-focused.svg");
+}

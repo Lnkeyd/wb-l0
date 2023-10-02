@@ -1,0 +1,11 @@
+.cart__label {
+  color: var(--text-black, #000);
+  padding-top: 15px;
+
+  font-family: Segoe UI;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.2px;
+}

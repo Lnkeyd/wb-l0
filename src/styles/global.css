@@ -1,0 +1,37 @@
+:root {
+  /* colors */
+  --violet: #6725a8;
+  --white: #ffffff;
+  --black: #000000;
+  --hr-color: rgba(0, 0, 0, 0.10);
+  --gray: #9797af;
+
+  /* paddings */
+  --padding-mobile: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--violet);
+}
+
+main {
+  border-radius: 24px;
+  background-color: var(--white);
+}
+
+main > section {
+  padding: 0 var(--padding-mobile);
+}
+
+header,
+section,
+footer {
+  padding: 0 16px;
+}
