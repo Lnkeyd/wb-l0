@@ -314,11 +314,112 @@
         </div>
         <!-- End Missing Item 3 -->
       </section>
-      <section class="delivery">delivery</section>
-      <section class="payment">payment</section>
-      <section class="customer">customer credentials</section>
-      <section class="checkout">checkout</section>
+      <section class="delivery">
+        <div class="delivery-header">
+          <div class="delivery-method"></div>
+          <div class="delivery-change"></div>
+        </div>
+        <div class="delivery-point">
+          <div class="delivery-point__title"></div>
+          <div class="delivery-point__address"></div>
+          <div class="delivery-point-info">
+            <div class="delivery-point-info__star"></div>
+            <div class="delivery-point-info__rating"></div>
+            <div class="delivery-point-info__scedule"></div>
+          </div>
+        </div>
+        <div class="delivery-price">
+          <div class="delivery-price__title"></div>
+          <div class="delivery-price__sum"></div>
+        </div>
+        <div class="delivery-products">
+          <div class="delivery-products-same-date">
+            <div class="delivery-products-range">
+              <div class="delivery-products-range__start-date"></div>
+              <div class="delivery-products-range__end-date"></div>
+            </div>
+            <div class="delivery-products-items">
+              <div class="delivery-products-item">
+                <img src="" alt="">
+                <div class="delivery-products-item__count">2</div>
+              </div>
+              <div class="delivery-products-item">
+                <img src="" alt="">
+                <div class="delivery-products-item__count">2</div>
+              </div>
+              <div class="delivery-products-item">
+                <img src="" alt="">
+                <div class="delivery-products-item__count">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="delivery-info">
+          <div class="delivery-info__icon"></div>
+          <div class="delivery-info__text"><span class="delivery-info__text_accent"></span></div>
+        </div>
+      </section>
+      <section class="payment">
+        <div class="payment">
+          <div class="payment-method"></div>
+          <div class="payment-change"></div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon"></div>
+          <div class="payment-card__number">1234 56•• •••• 1234</div>
+          <div class="payment-card__date">01/30</div>
+        </div>
+        <div class="payment-info">Спишем оплату с карты при получении</div>
+      </section>
+      <section class="customer">
+        <div class="customer-title"></div>
+        <form action="">
+          <input class="customer-name" type="text">
+          <input class="customer-surname" type="text">
+          <input class="customer-email" type="email">
+          <input class="customer-phone" type="text">
+          <input class="customer-tax-id" type="text">
+          <!-- after: text -->
+
+        </form>
+      </section>
+      <section class="checkout">
+        <div class="checkout__with-sale"></div>
+        <div class="checkout__without-sale"></div>
+        <div class="checkout__sale"></div>
+        <div class="checkout__delivery"></div>
+
+        <div class="delivery-info">
+          <div class="delivery-info__icon"></div>
+          <div class="delivery-info__text"><span class="delivery-info__text_accent"></span></div>
+        </div>
+
+        <div class="checkout-instant-pay">
+          <label for="">
+            <input type="checkbox">
+
+          </label>
+          <div class="checkout-instant-pay__description">Спишем оплату с карты при получении</div>
+        </div>
+
+        <button class="checkout-order">Заказать</button>
+        <div class="checkout-terms-of-service">
+          <label class="checkout-terms__label">
+            <input type="checkbox">
+            <a class="checkout-terms__link" href="">Соглашаюсь с правилами пользования торговой площадкой и возврата</a>
+          </label>
+        </div>
+      </section>
     </main>
     <footer>© 2022 ООО «Товары и точка»</footer>
+    <nav>
+      <ul>
+        <li><a href=""><img src="" alt="">Home</a></li>
+        <li><a href=""><img src="" alt="">Search</a></li>
+        <li><a href=""><img src="" alt="">Cart</a></li>
+        <li><a href=""><img src="" alt="">Fav</a></li>
+        <li><a href=""><img src="" alt="">User</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
