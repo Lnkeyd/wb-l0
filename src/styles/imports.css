@@ -2,3 +2,6 @@
 @import url('./components/footer/footer.css');
 @import url('./components/cart/cart.css');
 @import url('./components/checkbox/checkbox.css');
+@import url('./components/accordeon/accordeon.css');
+@import url('./components/missing/missing.css');
+@import url('./components/product/product.css');

@@ -1,0 +1,11 @@
+.accordeon {
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: inherit;
+  background-image: url("../../../../../public/images/icons/arrow.svg");
+  margin-right: 4px;
+  margin-top: 3px;
+
+  cursor: pointer;
+}

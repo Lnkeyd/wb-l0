@@ -1,0 +1,48 @@
+.missing-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 45px;
+
+  color: var(--text-black, #000);
+
+  /* Сайт/Body-semibold */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+
+  margin-bottom: 17px;
+}
+
+.missing-item div {
+  color: var(--gray);
+}
+
+.missing-item img {
+    filter: grayscale(1);
+}
+
+.product-wrapper.missing-item-wrapper {
+    display: grid;
+    grid-template-columns: 81px 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+.product-description.missing-item-description {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.product-image-container.missing-item-image-container {
+    grid-row-end: 2;
+}
+
+.product-buttons-wrap.missing-item-buttons-wrap {
+    margin-top: 7px;
+}
+
+.missing-item-buttons-wrap > div {
+    margin-right: 4px;
+}
