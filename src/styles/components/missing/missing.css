@@ -1,3 +1,7 @@
+.product.missing-item:not(:last-child) {
+    margin-top: -1px;
+}
+
 .missing-container {
   display: flex;
   align-items: center;
@@ -16,7 +20,7 @@
   margin-bottom: 17px;
 }
 
-.missing-item div {
+.missing-item-description > div {
   color: var(--gray);
 }
 
