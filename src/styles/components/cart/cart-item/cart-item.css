@@ -1,8 +1,23 @@
+.cart-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
 .cart-item-wrapper {
   display: grid;
   grid-template-columns: 81px 1fr;
-  /* grid-template-rows: 25px 82px 50px; */
-  grid-template-rows: 25px 85px 50px;
+  /* grid-template-rows: 25px 85px 1fr; */
+  grid-template-rows: 25px 1fr 46px;
+}
+
+.cart-item-image-container {
+  position: relative;
+
+  height: 107px;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .cart-item__hr {
@@ -10,25 +25,14 @@
   width: 100%;
 
   margin-top: 1px;
+
   margin-bottom: 12px;
   background-color: var(--hr-color);
-  /* margin-bottom: 12px; */
 }
 
 .cart-item__image {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
-
   width: 81px;
   height: 107px;
-
-  background-image: url("../../../../../public/images/t-shirt.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  position: relative;
 }
 
 .cart-item__check {
@@ -170,8 +174,12 @@
   grid-row-start: 3;
   grid-row-end: 4;
 
+  height: 32px;
+
   display: flex;
   align-items: center;
+
+  margin-top: 12px;
 
   /* background-color: peru; */
 }
@@ -226,22 +234,22 @@
 }
 
 .cart-item-buttons-wrap-icons {
-    margin-right: 12px;
-    margin-left: auto;
-    margin-top: 2px;
-    width: 64px;
+  margin-right: 12px;
+  margin-left: auto;
+  margin-top: 5px;
+  width: 64px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cart-item-buttons-wrap-icons__fav > img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cart-item-buttons-wrap-icons__delete > img {
-    cursor: pointer;
+  cursor: pointer;
 }
 /* 
     [a] [b]
