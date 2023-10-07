@@ -16,6 +16,8 @@
   --line-input: rgba(0, 0, 0, 0.20);
   /* paddings */
   --padding-mobile: 16px;
+  /* sizes */
+  --mobile-tapbar-height: 56px;
 }
 
 * {
@@ -27,6 +29,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--violet);
+  height: -webkit-fill-available;
 }
 
 main {

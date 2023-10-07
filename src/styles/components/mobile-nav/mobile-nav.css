@@ -1,6 +1,8 @@
 .mobile-nav {
   background-color: var(--white);
   padding-top: 2px;
+  position: sticky;
+  bottom: 0;
 }
 
 .mobile-nav > ul {
