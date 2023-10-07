@@ -1,0 +1,36 @@
+.checkout-terms-of-service {
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkout-terms-links {
+  color: var(--black);
+  margin-left: 8px;
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.checkout-terms-links > * {
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.checkout-terms-links-item {
+  color: var(--black);
+
+  text-decoration: none;
+}
+
+.checkout-terms-links-item__underline {
+  border-bottom: 1px solid var(--hr-color);
+  line-height: 0.85;
+}

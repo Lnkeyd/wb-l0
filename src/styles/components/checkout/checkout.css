@@ -1,0 +1,11 @@
+@import url('./checkout-info/checkout-info.css');
+@import url('./checkout-text/checkout-text.css');
+@import url('./checkout-instant-pay/checkout-instant-pay.css');
+@import url('./checkout-order/checkout-order.css');
+@import url('./checkout-terms/checkout-terms.css');
+
+.checkout {
+    margin-top: 16px;
+    padding-top: 8px;
+    padding-bottom: 40px;
+}

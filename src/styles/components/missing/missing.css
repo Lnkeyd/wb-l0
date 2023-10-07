@@ -1,5 +1,5 @@
 .product.missing-item:not(:last-child) {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 .missing-container {
@@ -25,28 +25,30 @@
 }
 
 .missing-item img {
-    filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 92%;
+  border-radius: 8px;
 }
 
 .product-wrapper.missing-item-wrapper {
-    display: grid;
-    grid-template-columns: 81px 1fr;
-    grid-template-rows: 1fr auto;
+  display: grid;
+  grid-template-columns: 81px 1fr;
+  grid-template-rows: 1fr auto;
 }
 
 .product-description.missing-item-description {
-    grid-row-start: 1;
-    grid-row-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .product-image-container.missing-item-image-container {
-    grid-row-end: 2;
+  grid-row-end: 2;
 }
 
 .product-buttons-wrap.missing-item-buttons-wrap {
-    margin-top: 7px;
+  margin-top: 7px;
 }
 
 .missing-item-buttons-wrap > div {
-    margin-right: 4px;
+  margin-right: 4px;
 }

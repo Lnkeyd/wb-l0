@@ -1,0 +1,65 @@
+.delivery-point {
+}
+
+.delivery-point__title {
+  color: var(--black);
+
+  /* Сайт/Body-semibold */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+
+  margin-top: 8px;
+}
+
+.delivery-point__address {
+  color: var(--black);
+
+  /* Сайт/Body */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.delivery-point-info {
+  display: flex;
+  align-items: baseline;
+  margin-top: 4px;
+}
+
+.delivery-point-info__star {
+  width: 12px;
+  height: 12px;
+  background-image: url("/public/images/icons/rating-rating-star-fill.svg");
+  background-repeat: no-repeat;
+}
+
+.delivery-point-info__rating {
+  color: var(--black);
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+
+  margin-left: 4px;
+}
+
+.delivery-point-info-scedule {
+  color: var(--black);
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+
+  margin-left: 8px;
+}

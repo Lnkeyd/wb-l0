@@ -5,3 +5,8 @@
 @import url('./components/accordeon/accordeon.css');
 @import url('./components/missing/missing.css');
 @import url('./components/product/product.css');
+@import url('./components/delivery/delivery.css');
+@import url('./components/payment/payment.css');
+@import url('./components/customer/customer.css');
+@import url('./components/checkout/checkout.css');
+@import url('./components/mobile-nav/mobile-nav.css');

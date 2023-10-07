@@ -1,0 +1,10 @@
+@import url("./customer-title/customer-title.css");
+@import url("./customer-form/customer-form.css");
+
+.customer {
+  padding-top: 16px;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background: var(--white);
+  margin-top: 12px;
+}

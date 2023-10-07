@@ -316,109 +316,236 @@
       </section>
       <section class="delivery">
         <div class="delivery-header">
-          <div class="delivery-method"></div>
-          <div class="delivery-change"></div>
+          <div class="delivery-header__method">Способ доставки</div>
+          <div class="delivery-header__change">Изменить</div>
         </div>
         <div class="delivery-point">
-          <div class="delivery-point__title"></div>
-          <div class="delivery-point__address"></div>
+          <div class="delivery-point__title">Пункт выдачи</div>
+          <div class="delivery-point__address">
+            Бишкек, улица Ахматбека Суюмбаева, 12/1
+          </div>
           <div class="delivery-point-info">
             <div class="delivery-point-info__star"></div>
-            <div class="delivery-point-info__rating"></div>
-            <div class="delivery-point-info__scedule"></div>
+            <div class="delivery-point-info__rating">4.99</div>
+            <div class="delivery-point-info-scedule">
+              Ежедневно с
+              <span class="delivery-point-info--scedule__start">10</span> до
+              <span class="delivery-point-info--scedule__end">21</span>
+            </div>
           </div>
         </div>
         <div class="delivery-price">
-          <div class="delivery-price__title"></div>
-          <div class="delivery-price__sum"></div>
+          <div class="delivery-price__title">Стоимость доставки</div>
+          <div class="delivery-price__sum">Бесплатно</div>
         </div>
         <div class="delivery-products">
+          <!-- Same Date Start -->
           <div class="delivery-products-same-date">
             <div class="delivery-products-range">
-              <div class="delivery-products-range__start-date"></div>
-              <div class="delivery-products-range__end-date"></div>
+              <div class="delivery-products-range__start-date">5</div>
+              <div class="delivery-products-range__dash">—</div>
+              <div class="delivery-products-range__end-date">6</div>
+              <div class="delivery-products-range__month">&nbsp;февраля</div>
             </div>
             <div class="delivery-products-items">
               <div class="delivery-products-item">
-                <img src="" alt="">
+                <img
+                  class="delivery-products-item__image"
+                  src="/public/images/t-shirt.png"
+                  alt="delivery product item"
+                />
                 <div class="delivery-products-item__count">2</div>
               </div>
               <div class="delivery-products-item">
-                <img src="" alt="">
-                <div class="delivery-products-item__count">2</div>
+                <img
+                  class="delivery-products-item__image"
+                  src="/public/images/phone-case.png"
+                  alt="delivery product item"
+                />
+                <div class="delivery-products-item__count">184</div>
               </div>
               <div class="delivery-products-item">
-                <img src="" alt="">
+                <img
+                  class="delivery-products-item__image"
+                  src="/public/images/pencils.png"
+                  alt="delivery product item"
+                />
                 <div class="delivery-products-item__count">2</div>
               </div>
             </div>
           </div>
+          <!-- Same Date End -->
+          <!-- Same Date Start -->
+          <div class="delivery-products-same-date">
+            <div class="delivery-products-range">
+              <div class="delivery-products-range__start-date">7</div>
+              <div class="delivery-products-range__dash">—</div>
+              <div class="delivery-products-range__end-date">8</div>
+              <div class="delivery-products-range__month">&nbsp;февраля</div>
+            </div>
+            <div class="delivery-products-items">
+              <div class="delivery-products-item">
+                <img
+                  class="delivery-products-item__image"
+                  src="/public/images/phone-case.png"
+                  alt="delivery product item"
+                />
+                <div class="delivery-products-item__count">16</div>
+              </div>
+            </div>
+          </div>
+          <!-- Same Date End -->
         </div>
         <div class="delivery-info">
-          <div class="delivery-info__icon"></div>
-          <div class="delivery-info__text"><span class="delivery-info__text_accent"></span></div>
+          <div class="delivery-info__icon">
+            <img src="/public/images/icons/shipping-info.svg" alt="" />
+          </div>
+          <div class="delivery-info__text">
+            Обратная доставка товаров на склад при отказе&nbsp;—&nbsp;<span
+              class="delivery-info__text_accent"
+              >бесплатно</span
+            >
+          </div>
         </div>
       </section>
       <section class="payment">
-        <div class="payment">
-          <div class="payment-method"></div>
-          <div class="payment-change"></div>
+        <div class="payment-header">
+          <div class="payment-header__method">Способ оплаты</div>
+          <div class="payment-header__change">Изменить</div>
         </div>
         <div class="payment-card">
-          <div class="payment-card__icon"></div>
+          <div class="payment-card__icon">
+            <img src="/public/images/icons/card-mir.svg" alt="card mir" />
+          </div>
           <div class="payment-card__number">1234 56•• •••• 1234</div>
           <div class="payment-card__date">01/30</div>
         </div>
         <div class="payment-info">Спишем оплату с карты при получении</div>
       </section>
       <section class="customer">
-        <div class="customer-title"></div>
-        <form action="">
-          <input class="customer-name" type="text">
-          <input class="customer-surname" type="text">
-          <input class="customer-email" type="email">
-          <input class="customer-phone" type="text">
-          <input class="customer-tax-id" type="text">
+        <div class="customer-title">Получатель</div>
+        <form class="customer-form" action="">
+          <div class="customer-form__name customer-form__container">
+            <input class="customer-form__input" type="text" placeholder="Имя" />
+            <div class="customer-form__line"></div>
+          </div>
+          <div class="customer-form__surname customer-form__container">
+            <input
+              class="customer-form__input"
+              type="text"
+              placeholder="Фамилия"
+            />
+            <div class="customer-form__line"></div>
+          </div>
+          <div class="customer-form__email customer-form__container">
+            <input
+              class="customer-form__input"
+              type="email "
+              placeholder="Электронная почта"
+            />
+            <div class="customer-form__line"></div>
+          </div>
+          <div class="customer-form__phone customer-form__container">
+            <input
+              class="customer-form__input customer-form__input_active customer-form__input_error"
+              type="text"
+              placeholder="Телефон"
+            />
+            <div class="customer-form__line"></div>
+          </div>
+          <div class="customer-form__tax-id customer-form__container">
+            <input class="customer-form__input" type="text" placeholder="ИНН" />
+            <div class="customer-form__line"></div>
+          </div>
           <!-- after: text -->
-
         </form>
       </section>
       <section class="checkout">
-        <div class="checkout__with-sale"></div>
-        <div class="checkout__without-sale"></div>
-        <div class="checkout__sale"></div>
-        <div class="checkout__delivery"></div>
-
-        <div class="delivery-info">
-          <div class="delivery-info__icon"></div>
-          <div class="delivery-info__text"><span class="delivery-info__text_accent"></span></div>
+        <div class="checkout-with-sale">
+          <div class="checkout-with-sale__title">Итого</div>
+          <div class="checkout-with-sale__value">2 101 063 сом</div>
+        </div>
+        <div class="checkout-without-sale">
+          <div class="checkout-without-sale__title">203 товара</div>
+          <div class="checkout-without-sale__value">2 302 048 сом</div>
+        </div>
+        <div class="checkout-sale">
+          <div class="checkout-sale__title">Скидка</div>
+          <div class="checkout-sale__value">−200 985 сом</div>
+        </div>
+        <div class="checkout-delivery">
+          <div class="checkout-delivery__title">Доставка</div>
+          <div class="checkout-delivery__value">Бесплатно</div>
         </div>
 
+        <div class="delivery-info checkout-info">
+          <div class="delivery-info__icon">
+            <img src="/public/images/icons/shipping-info.svg" alt="" />
+          </div>
+          <div class="delivery-info__text">
+            Обратная доставка товаров на склад при отказе&nbsp;—&nbsp;<span
+              class="delivery-info__text_accent"
+              >бесплатно</span
+            >
+          </div>
+        </div>
+        <!-- <label class="product__check check-label">
+                <input class="check__input" type="checkbox" checked />
+                <span class="check-style"></span>
+              </label> -->
         <div class="checkout-instant-pay">
-          <label for="">
-            <input type="checkbox">
-
+          <label class="check-label checkout-instant-pay-label">
+            <input class="check__input" type="checkbox" />
+            <span class="check-style"></span>
+            <span class="checkout-instant-pay__text">
+              Списать оплату сразу
+            </span>
           </label>
-          <div class="checkout-instant-pay__description">Спишем оплату с карты при получении</div>
+          <div class="checkout-instant-pay__description">
+            Спишем оплату с карты при получении
+          </div>
         </div>
 
         <button class="checkout-order">Заказать</button>
         <div class="checkout-terms-of-service">
-          <label class="checkout-terms__label">
-            <input type="checkbox">
-            <a class="checkout-terms__link" href="">Соглашаюсь с правилами пользования торговой площадкой и возврата</a>
-          </label>
+          <img
+            class="checkout-terms-of-service__check"
+            src="/public/images/icons/check.svg"
+            alt="Подтверждение согласия"
+          />
+          <div class="checkout-terms-links">
+            Соглашаюсь
+            <a class="checkout-terms-links-item" href="#"
+              ><span class="checkout-terms-links-item__underline">
+                с правилами пользования торговой площадкой
+              </span></a
+            >и<a class="checkout-terms-links-item" href="#">
+              <span class="checkout-terms-links-item__underline">
+                возврата
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
     <footer>© 2022 ООО «Товары и точка»</footer>
-    <nav>
+    <nav class="mobile-nav">
       <ul>
-        <li><a href=""><img src="" alt="">Home</a></li>
-        <li><a href=""><img src="" alt="">Search</a></li>
-        <li><a href=""><img src="" alt="">Cart</a></li>
-        <li><a href=""><img src="" alt="">Fav</a></li>
-        <li><a href=""><img src="" alt="">User</a></li>
+        <li>
+          <a href="#"><img src="/public/images/icons/nav-home.svg" alt="Домашняя страница" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/public/images/icons/nav-catalog.svg" alt="Каталог" /></a>
+        </li>
+        <li class="mobile-nav-cart">
+          <a href="#"><img src="/public/images/icons/nav-cart.svg" alt="Корзина" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/public/images/icons/nav-favorites.svg" alt="Избранное" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/public/images/icons/nav-profile.svg" alt="Профиль" /></a>
+        </li>
       </ul>
     </nav>
   </body>

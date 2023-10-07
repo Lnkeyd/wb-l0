@@ -1,13 +1,19 @@
 :root {
   /* colors */
   --violet: #6725a8;
+  --magenta: #cb11ab;
   --white: #ffffff;
   --black: #000000;
-  --hr-color: rgba(0, 0, 0, 0.10);
+  --hr-color: rgba(0, 0, 0, 0.1);
   --gray: #9797af;
-  --smoky: #F6F6FA;
+  --light-gray: #A0A0A4;
+  --smoky: #f6f6fa;
+  --dark-smoky: #F0ECF4;
   --red-accent: #ff3b30;
-
+  --light-red: #c20013;
+  --orange: #f55123;
+  --green: #0cb477;
+  --line-input: rgba(0, 0, 0, 0.20);
   /* paddings */
   --padding-mobile: 16px;
 }

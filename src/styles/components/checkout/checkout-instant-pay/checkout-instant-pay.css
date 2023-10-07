@@ -1,0 +1,41 @@
+.checkout-instant-pay {
+  margin-top: 16px;
+  display: flex;
+  padding: 11px 8px 12px 8px;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: var(--dark-smoky);
+}
+
+.check-label.checkout-instant-pay-label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.checkout-instant-pay__text {
+  display: flex;
+  align-items: center;
+
+  color: var(--black);
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+  margin-left: -4px;
+}
+
+.checkout-instant-pay__description {
+  color: var(--black);
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+  margin-top: 2px;
+}

@@ -1,0 +1,11 @@
+@import url("./payment-header/payment-header.css");
+@import url("./payment-card/payment-card.css");
+@import url('./payment-info/payment-info.css');
+
+.payment {
+  margin-top: 12px;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background: var(--white);
+}

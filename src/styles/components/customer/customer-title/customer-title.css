@@ -1,0 +1,11 @@
+.customer-title {
+  color: var(--black);
+
+  /* Сайт/Н3-new */
+  font-family: Segoe UI;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.2px;
+}

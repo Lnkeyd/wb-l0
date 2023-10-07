@@ -1,0 +1,38 @@
+.checkout-with-sale,
+.checkout-without-sale,
+.checkout-sale,
+.checkout-delivery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-with-sale__title,
+.checkout-with-sale__value {
+  color: var(--black);
+
+  /* Сайт/Н3-new */
+  font-family: Segoe UI;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.2px;
+
+  margin-bottom: 8px;
+}
+
+.checkout-without-sale__title,
+.checkout-without-sale__value,
+.checkout-sale__title,
+.checkout-sale__value,
+.checkout-delivery__title,
+.checkout-delivery__value {
+  color: var(--black);
+
+  /* Сайт/Body */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}

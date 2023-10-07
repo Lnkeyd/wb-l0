@@ -1,0 +1,14 @@
+@import url("./delivery-header/delivery-header.css");
+@import url("./delivery-point/delivery-point.css");
+@import url("./delivery-price/delivery-price.css");
+@import url("./delivery-products/delivery-products.css");
+@import url('./delivery-info/delivery-info.css');
+
+
+.delivery {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  margin-top: 27px;
+}
