@@ -1,253 +1,310 @@
 .product:not(:last-child) {
-    margin-bottom: 13px;
-  }
-  
+  margin-bottom: 13px;
+}
+
+.product-wrapper {
+  display: grid;
+  grid-template-columns: 81px 1fr;
+  grid-template-rows: 25px 1fr 46px;
+}
+
+.product-image-container {
+  position: relative;
+
+  height: 107px;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.product__hr {
+  height: 1px;
+  width: 100%;
+
+  margin-top: 1px;
+
+  margin-bottom: 12px;
+  background-color: var(--hr-color);
+}
+
+.product__image {
+  width: 81px;
+  height: 107px;
+}
+
+.product__check {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+.product__size {
+  position: absolute;
+  top: 81px;
+  left: 4px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 6px;
+
+  color: var(--black);
+
+  /* Мобильный сайт/Body-2 */
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.product__price {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-left: 16px;
+
+  color: var(--black);
+
+  margin-top: 1px;
+  /* Сайт/H4 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+
+  /* background-color: blue; */
+}
+
+.product__price_old {
+  color: var(--gray);
+  margin-left: 5px;
+  position: relative;
+
+  text-decoration: dashed;
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.product__price_old::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  bottom: 6px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+.product__price_old::after {
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-image: url("../../../../../public/images/icons/dash.svg");
+  background-repeat: repeat-x;
+  overflow: hidden;
+  color: var(--gray);
+}
+
+.product-description {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  padding-left: 15px;
+  /* background-color: green; */
+}
+
+.product-description__title {
+  color: var(--text-black, #000);
+
+  margin-top: 2px;
+
+  /* Мобильный сайт/Body-2 */
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.product-description__color {
+  color: var(--black);
+  margin-top: 7px;
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.product-description__stock {
+  color: var(--gray);
+
+  margin-top: 7px;
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.product-description-company {
+  display: none;
+}
+
+.product-buttons-wrap {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+
+  /* background-color: peru; */
+}
+
+.product-buttons-wrap-counter {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 0 2px;
+
+  background: var(--white);
+  width: 80px;
+  height: 32px;
+}
+
+.product-buttons-wrap-counter__minus,
+.product-buttons-wrap-counter__plus {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50% -50%);
+}
+
+.product-buttons-wrap-counter__count {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--black);
+
+  /* Мобильный сайт/Body-2 */
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.product-buttons-wrap-items-left {
+  color: var(--red-accent);
+
+  margin-left: 16px;
+
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.product-buttons-wrap-icons {
+  margin-right: 12px;
+  margin-left: auto;
+  margin-top: 5px;
+  width: 64px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-buttons-wrap-icons__fav > img {
+  cursor: pointer;
+}
+
+.product-buttons-wrap-icons__delete > img {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
   .product-wrapper {
     display: grid;
-    grid-template-columns: 81px 1fr;
-    /* grid-template-rows: 25px 85px 1fr; */
-    grid-template-rows: 25px 1fr 46px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
   }
-  
+
   .product-image-container {
-    position: relative;
-  
-    height: 107px;
-  
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
   }
-  
-  .product__hr {
-    height: 1px;
-    width: 100%;
-  
-    margin-top: 1px;
-  
-    margin-bottom: 12px;
-    background-color: var(--hr-color);
-  }
-  
+
   .product__image {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
     width: 81px;
     height: 107px;
   }
-  
+
   .product__check {
-    position: absolute;
-    top: 2px;
-    left: 4px;
+    top: 33px;
+    left: 0px;
   }
-  
+
   .product__size {
-    position: absolute;
-    top: 81px;
-    left: 4px;
-    display: flex;
-    width: 22px;
-    height: 22px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 6px;
-  
-    color: var(--black);
-  
-    /* Мобильный сайт/Body-2 */
-    font-family: Segoe UI;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    display: none;
   }
-  
-  .product__price {
-    grid-column-start: 2;
-    grid-column-end: 3;
+
+  .product-description {
     grid-row-start: 1;
     grid-row-end: 2;
-    padding-left: 16px;
-  
-    color: var(--black);
-  
-    margin-top: 1px;
-    /* Сайт/H4 */
-    font-family: Segoe UI;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px; /* 150% */
-  
-    /* background-color: blue; */
   }
-  
-  .product__price_old {
-    color: var(--gray);
-    margin-left: 5px;
-    position: relative;
-  
-    text-decoration: dashed;
-  
-    /* Сайт/Caption */
-    font-family: Segoe UI;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 123.077% */
+
+  .product-description-company {
+    display: block;
   }
-  
-  .product__price_old::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    bottom: 6px;
-    width: 100%;
-    height: 1px;
-    background-color: var(--gray);
-  }
-  
-  .product__price_old::after {
-    content: "";
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    background-image: url("../../../../../public/images/icons/dash.svg");
-    background-repeat: repeat-x;
-    overflow: hidden;
-    color: var(--gray);
-  }
-  
-  .product-description {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  
-    padding-left: 15px;
-    /* background-color: green; */
-  }
-  
-  .product-description__title {
-    color: var(--text-black, #000);
-  
-    margin-top: 2px;
-  
-    /* Мобильный сайт/Body-2 */
-    font-family: Segoe UI;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-  }
-  
-  .product-description__color {
-    color: var(--black);
-    margin-top: 7px;
-  
-    /* Сайт/Caption */
-    font-family: Segoe UI;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 123.077% */
-  }
-  
-  .product-description__stock {
-    color: var(--gray);
-  
-    margin-top: 7px;
-    /* Сайт/Caption */
-    font-family: Segoe UI;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 123.077% */
-  }
-  
+
   .product-buttons-wrap {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  
-    height: 32px;
-  
-    display: flex;
-    align-items: center;
-  
-    margin-top: 12px;
-  
-    /* background-color: peru; */
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    flex-direction: column;
   }
-  
-  .product-buttons-wrap-counter {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 6px;
-    padding: 0 2px;
-  
-    background: var(--white);
-    width: 80px;
-    height: 32px;
+
+  .product__price {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
-  
-  .product-buttons-wrap-counter__minus,
-  .product-buttons-wrap-counter__plus {
-    width: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50% -50%);
-  }
-  
-  .product-buttons-wrap-counter__count {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-  
-    color: var(--black);
-  
-    /* Мобильный сайт/Body-2 */
-    font-family: Segoe UI;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-  }
-  
-  .product-buttons-wrap-items-left {
-    color: var(--red-accent);
-  
-    margin-left: 16px;
-  
-    /* Сайт/Caption */
-    font-family: Segoe UI;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 123.077% */
-  }
-  
-  .product-buttons-wrap-icons {
-    margin-right: 12px;
-    margin-left: auto;
-    margin-top: 5px;
-    width: 64px;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .product-buttons-wrap-icons__fav > img {
-    cursor: pointer;
-  }
-  
-  .product-buttons-wrap-icons__delete > img {
-    cursor: pointer;
-  }
+}

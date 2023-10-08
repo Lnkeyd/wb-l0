@@ -43,3 +43,9 @@
   background-color: var(--orange);
   color: var(--white);
 }
+
+@media screen and (min-width: 1024px) {
+    .mobile-nav {
+        display: none;
+    }
+}

@@ -2,7 +2,7 @@
 @import url('./__menu/header__menu.css');
 @import url('./__search/header__search.css');
 
-header {
+.mobile-header {
   display: flex;
   height: 56px;
   padding: 0px 13px;
@@ -15,4 +15,10 @@ header {
   top: 0;
 
   z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-header {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-@import url('./components/header/header.css');
+@import url('./components/mobile-header/mobile-header.css');
 @import url('./components/footer/footer.css');
 @import url('./components/cart/cart.css');
 @import url('./components/checkbox/checkbox.css');
@@ -10,3 +10,6 @@
 @import url('./components/customer/customer.css');
 @import url('./components/checkout/checkout.css');
 @import url('./components/mobile-nav/mobile-nav.css');
+@import url('./components/desktop-header/desktop-header.css');
+@import url('./components/section-button/section-button.css');
+@import url('./components/section-title/section-title.css');

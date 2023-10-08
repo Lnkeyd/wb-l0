@@ -9,3 +9,10 @@
   line-height: 28px; /* 140% */
   letter-spacing: -0.2px;
 }
+
+@media screen and (min-width: 1024px) {
+  .cart__label {
+    font-size: 28px;
+    padding-top: 38px;
+  }
+}

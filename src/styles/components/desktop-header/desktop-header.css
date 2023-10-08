@@ -1,0 +1,172 @@
+.desktop-header {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .desktop-menu__logo {
+    width: 108px;
+    margin-top: -4px;
+    margin-left: 16px;
+    color: var(--system-white, #fff);
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 85.714% */
+    font-variant: all-small-caps;
+    letter-spacing: 0.56px;
+  }
+
+  .desktop-menu {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-menu__button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+
+  .desktop-header-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 43px;
+    align-items: center;
+  }
+
+  .desktop-header-nav > div {
+    display: block;
+  }
+
+  .desktop-header-search {
+    position: relative;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32.5px;
+  }
+
+  .desktop-header-search::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    right: 56px;
+
+    width: 24px;
+    height: 24px;
+    background-image: url("/public/images/icons/search.svg");
+    opacity: 0.4;
+  }
+
+  .desktop-header-search__input {
+    height: 48px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.2);
+
+    color: var(--white);
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+  }
+
+  .desktop-header-search__input:focus {
+    outline: none;
+  }
+  .desktop-header-search__input::placeholder {
+    color: var(--white);
+    opacity: 0.5;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+  }
+
+  .desktop-header-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+  }
+
+  .desktop-header-nav-cart__image {
+    height: 28px;
+    width: 28px;
+  }
+
+  .desktop-header-nav-profile > svg {
+    margin-right: -1px;
+    margin-top: -2px;
+  }
+  .desktop-header-nav-profile > svg path {
+    fill: var(--white);
+  }
+
+  .desktop-header-nav-cart > svg {
+    margin-top: -3px;
+    margin-right: 8px;
+  }
+
+  .desktop-header-nav__item {
+    position: relative;
+  }
+
+  .desktop-header-nav__item>span {
+    position: absolute;
+    top: -7.6px;
+    right: 5.5px;
+    padding: 2.2px 5px;
+
+    height: 16px;
+    min-width: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 180% */
+
+    border-radius: 16px;
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  .desktop-header-nav__item > svg path {
+    fill: var(--white);
+  }
+
+  .desktop-header-nav__label {
+    color: var(--white);
+
+    /* Сайт/Caption */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+  }
+}

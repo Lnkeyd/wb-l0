@@ -3,3 +3,10 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (min-width: 1024px) {
+    .cart-container {
+      margin-top: 16px;
+    }
+  }
+  

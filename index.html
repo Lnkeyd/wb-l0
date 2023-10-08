@@ -3,20 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/imports.css" />
     <title>Товары и точка</title>
   </head>
   <body>
-    <header class="header">
-      <div class="menu">
+    <!-- Mobile Header Start -->
+    <header class="mobile-header">
+      <div class="mobile-menu">
         <img src="../public/images/icons/menu.svg" alt="menu" />
       </div>
-      <div class="logo">Товары и точка</div>
-      <div class="search">
+      <div class="mobile-logo">Товары и точка</div>
+      <div class="mobile-search">
         <img src="../public/images/icons/search.svg" alt="search" />
       </div>
     </header>
+    <!-- Mobile Header End -->
+    <!-- Desctop Header Start -->
+    <header class="desktop-header">
+      <div class="desktop-menu">
+        <button class="desktop-menu__button">
+          <img src="../public/images/icons/desktop-menu.svg" alt="Меню" />
+        </button>
+        <div class="desktop-menu__logo">Товары и точка</div>
+      </div>
+      <div class="desktop-header-search">
+        <input
+          class="desktop-header-search__input"
+          type="text"
+          placeholder="Я ищу..."
+        />
+      </div>
+      <div class="desktop-header-nav">
+        <a href="#" class="desktop-header-nav__item desktop-header-nav-profile">
+          <svg
+            class="desktop-header-nav-profile__image"
+            width="28"
+            height="29"
+            viewBox="0 0 28 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="profile">
+              <g id="Vector">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.80005 22.7061C2.80005 23.7739 3.54488 24.3333 5.62764 24.3333H21.9725C24.0552 24.3333 24.8 23.7739 24.8 22.7061C24.8 19.6044 20.5656 15.3333 13.8069 15.3333C7.03453 15.3333 2.80005 19.6044 2.80005 22.7061Z"
+                  fill="#CCCCCC"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.8 8.26675C18.8 11.1204 16.4913 13.3333 13.8001 13.3333C11.1088 13.3333 8.80006 11.1204 8.80006 8.29093C8.78692 5.4977 11.122 3.33325 13.8001 3.33325C16.4781 3.33325 18.8 5.44933 18.8 8.26675Z"
+                  fill="#CCCCCC"
+                />
+              </g>
+            </g>
+          </svg>
+          <div class="desktop-header-nav__label">Профиль</div>
+        </a>
+        <a href="#" class="desktop-header-nav__item desktop-header-nav-cart">
+          <svg class="desktop-header-nav-cart__image" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="cart">
+            <g id="Vector">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3248 18.4744C10.4895 18.9686 10.99 19.2688 11.5036 19.1814L24.1601 17.0281C24.596 16.954 24.9396 16.616 25.0209 16.1813L26.5023 8.25891C26.5592 7.95471 26.3289 7.67241 26.0194 7.66708L7.35686 7.34608C6.99275 7.33982 6.7318 7.69539 6.84695 8.04086L10.3248 18.4744Z" fill="#CB11AB"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.75 25.3333C24.9926 25.3333 26 24.3259 26 23.0833C26 21.8406 24.9926 20.8333 23.75 20.8333C22.5074 20.8333 21.5 21.8406 21.5 23.0833C21.5 24.3259 22.5074 25.3333 23.75 25.3333Z" fill="#CB11AB"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 25.3333C11.9926 25.3333 13 24.3259 13 23.0833C13 21.8406 11.9926 20.8333 10.75 20.8333C9.50736 20.8333 8.5 21.8406 8.5 23.0833C8.5 24.3259 9.50736 25.3333 10.75 25.3333Z" fill="#CB11AB"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.45442 3.56046C3.1177 3.41833 4.01745 3.33325 5 3.33325C5.98255 3.33325 6.8823 3.41833 7.54558 3.56046C7.87345 3.63072 8.16489 3.71927 8.38495 3.83075C8.4917 3.88484 8.61185 3.959 8.71511 4.06714C8.80017 4.15621 9 4.40237 9 4.83325C9 5.26413 8.80017 5.5103 8.71511 5.59937C8.61185 5.7075 8.4917 5.78167 8.38495 5.83575C8.16489 5.94724 7.87345 6.03579 7.54558 6.10604C6.8823 6.24818 5.98255 6.33325 5 6.33325C4.01745 6.33325 3.1177 6.24818 2.45442 6.10604C2.12655 6.03579 1.83511 5.94724 1.61505 5.83575C1.5083 5.78167 1.38815 5.7075 1.28489 5.59937C1.19983 5.5103 1 5.26413 1 4.83325C1 4.40237 1.19983 4.15621 1.28489 4.06714C1.38815 3.959 1.5083 3.88484 1.61505 3.83075C1.83511 3.71927 2.12655 3.63072 2.45442 3.56046Z" fill="#CB11AB"/>
+            </g>
+            </g>
+            </svg>
+            <span class="cart-count">3</span>
+          <div class="desktop-header-nav__label">Корзина</div>
+        </a>
+      </div>
+    </header>
+    <!-- Desctop Header End -->
     <main class="sections">
       <section class="cart">
         <div class="cart__label">Корзина</div>
@@ -53,6 +117,12 @@
               </div>
               <div class="product-description__color">Цвет: белый</div>
               <div class="product-description__stock">Коледино WB</div>
+              <div class="product-description-company">
+                <div class="product-description-company__text">OOO Вайлдберриз</div>
+                <div class="product-description-company__info">
+                  <img src="" alt="">
+                </div>
+              </div>
             </div>
             <div class="product-buttons-wrap">
               <div class="product-buttons-wrap-counter">
@@ -316,8 +386,8 @@
       </section>
       <section class="delivery">
         <div class="delivery-header">
-          <div class="delivery-header__method">Способ доставки</div>
-          <div class="delivery-header__change">Изменить</div>
+          <div class="section-title">Способ доставки</div>
+          <div class="section-button">Изменить</div>
         </div>
         <div class="delivery-point">
           <div class="delivery-point__title">Пункт выдачи</div>
@@ -410,8 +480,8 @@
       </section>
       <section class="payment">
         <div class="payment-header">
-          <div class="payment-header__method">Способ оплаты</div>
-          <div class="payment-header__change">Изменить</div>
+          <div class="payment-header__method section-title">Способ оплаты</div>
+          <div class="payment-header__change section-button">Изменить</div>
         </div>
         <div class="payment-card">
           <div class="payment-card__icon">
@@ -423,7 +493,7 @@
         <div class="payment-info">Спишем оплату с карты при получении</div>
       </section>
       <section class="customer">
-        <div class="customer-title">Получатель</div>
+        <div class="section-title">Получатель</div>
         <form class="customer-form" action="">
           <div class="customer-form__name customer-form__container">
             <input class="customer-form__input" type="text" placeholder="Имя" />
@@ -462,7 +532,7 @@
       </section>
       <section class="checkout">
         <div class="checkout-with-sale">
-          <div class="checkout-with-sale__title">Итого</div>
+          <div class="checkout-with-sale__title section-title">Итого</div>
           <div class="checkout-with-sale__value">2 101 063 сом</div>
         </div>
         <div class="checkout-without-sale">
@@ -489,10 +559,6 @@
             >
           </div>
         </div>
-        <!-- <label class="product__check check-label">
-                <input class="check__input" type="checkbox" checked />
-                <span class="check-style"></span>
-              </label> -->
         <div class="checkout-instant-pay">
           <label class="check-label checkout-instant-pay-label">
             <input class="check__input" type="checkbox" />
@@ -532,19 +598,31 @@
     <nav class="mobile-nav">
       <ul>
         <li>
-          <a href="#"><img src="/public/images/icons/nav-home.svg" alt="Домашняя страница" /></a>
+          <a href="#"
+            ><img
+              src="/public/images/icons/nav-home.svg"
+              alt="Домашняя страница"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="/public/images/icons/nav-catalog.svg" alt="Каталог" /></a>
+          <a href="#"
+            ><img src="/public/images/icons/nav-catalog.svg" alt="Каталог"
+          /></a>
         </li>
         <li class="mobile-nav-cart">
-          <a href="#"><img src="/public/images/icons/nav-cart.svg" alt="Корзина" /></a>
+          <a href="#"
+            ><img src="/public/images/icons/nav-cart.svg" alt="Корзина"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="/public/images/icons/nav-favorites.svg" alt="Избранное" /></a>
+          <a href="#"
+            ><img src="/public/images/icons/nav-favorites.svg" alt="Избранное"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="/public/images/icons/nav-profile.svg" alt="Профиль" /></a>
+          <a href="#"
+            ><img src="/public/images/icons/nav-profile.svg" alt="Профиль"
+          /></a>
         </li>
       </ul>
     </nav>

@@ -8,3 +8,10 @@
 
     cursor: pointer;
 } */
+
+@media screen and (min-width: 1024px) {
+  .cart__button.accordeon {
+    margin-right: -1px;
+    margin-top: 0;
+  }
+}
