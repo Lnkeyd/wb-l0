@@ -53,3 +53,10 @@
   background-repeat: repeat-x;
   overflow: hidden;
 }
+
+@media screen and (min-width: 1024px){
+  .delivery-info {
+    margin-top: 15px;
+    padding: 0;
+  }
+}

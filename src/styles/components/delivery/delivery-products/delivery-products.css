@@ -57,3 +57,21 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (min-width: 1024px) {
+  .delivery-products-same-date {
+    display: flex;
+  }
+
+  .delivery-products-range {
+    width: 184px;
+  }
+
+  .delivery-products-items {
+    margin-top: 4px;
+  }
+
+  .delivery-products-same-date:not(:last-child) {
+    margin-bottom: -4px;
+  }
+}

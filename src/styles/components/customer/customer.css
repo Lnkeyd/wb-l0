@@ -7,3 +7,11 @@
   background: var(--white);
   margin-top: 12px;
 }
+
+@media screen and (min-width: 1024px) {
+  .customer {
+    margin-top: 16px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}

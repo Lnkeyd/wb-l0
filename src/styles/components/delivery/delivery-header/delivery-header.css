@@ -3,3 +3,9 @@
   justify-content: space-between;
   align-items: baseline;
 }
+
+@media screen and (min-width: 1024px) {
+  .delivery-header {
+    margin-top: 5px;
+  }
+}

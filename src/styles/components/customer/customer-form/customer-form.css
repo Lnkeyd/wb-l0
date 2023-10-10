@@ -74,7 +74,7 @@
 /* ERROR END */
 
 .customer-form__line {
-  height: .9px;
+  height: 0.9px;
   margin-top: 2.2px;
   background-color: var(--line-input);
 }
@@ -90,4 +90,25 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 116.667% */
+}
+
+@media screen and (min-width: 1024px) {
+  .customer-form {
+    margin-top: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+
+  .customer-form__container:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .customer-form__name, .customer-form__surname {
+    width: 282px;
+  }
+
+  .customer-form__email, .customer-form__phone, .customer-form__tax-id {
+    width: 180px;
+  }
 }

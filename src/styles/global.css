@@ -58,6 +58,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   main {
+    padding-bottom: 49.5px;
     display: grid;
     grid-template-columns: minmax(695px, 695px) auto;
     grid-template-rows: auto auto auto auto auto;
@@ -74,10 +75,24 @@ footer {
     grid-column-start: 1;
     grid-column-end: 2;
   }
+
+  section:not(.checkout).customer,
+  section:not(.checkout).payment,
+  section:not(.checkout).delivery {
+    padding-right: 24px;
+  }
   
   main > section {
     padding: 0 24px;
   }
+  .delivery, .payment, .customer {
+    margin-left: 24px;
+    margin-right: 34px;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    padding-right: 23px;
+  }
+
   footer {
     padding: 0;
   }

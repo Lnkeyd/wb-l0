@@ -63,3 +63,27 @@
 
   margin-left: 8px;
 }
+
+@media screen and (min-width: 1024px) {
+  .delivery-point {
+    margin-top: 8px;
+  }
+
+  .delivery-point-wrapper {
+    display: flex;
+    align-items: first baseline;
+  }
+
+  .delivery-point-info {
+    display: flex;
+    margin-left: 185px;
+  }
+  .delivery-price {
+    display: flex;
+    align-items: first baseline;
+  }
+
+  .delivery-point__address {
+    margin-left: 78px;
+  }
+}

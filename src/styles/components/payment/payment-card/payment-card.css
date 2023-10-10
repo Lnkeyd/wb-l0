@@ -19,3 +19,9 @@
 .payment-card__date {
     margin-left: 12px;
 }
+
+@media screen and (min-width: 1024px) {
+  .payment-card {
+    margin-top: 8px;
+  }
+}

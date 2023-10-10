@@ -12,3 +12,11 @@
   padding-bottom: 24px;
   margin-top: 27px;
 }
+
+@media screen and (min-width: 1024px){
+  .delivery {
+    margin-top: 32px;
+    padding-top: 11px;
+    padding-bottom: 20px;
+  }
+}

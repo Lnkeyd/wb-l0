@@ -16,3 +16,9 @@ li {
 input {
     border: none;
 }
+
+h4 {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
