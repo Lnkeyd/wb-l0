@@ -39,3 +39,9 @@
   line-height: 16px; /* 123.077% */
   margin-top: 2px;
 }
+
+@media screen and (min-width: 1024px) {
+  .checkout-instant-pay {
+    margin-top: 12px;
+  }
+}

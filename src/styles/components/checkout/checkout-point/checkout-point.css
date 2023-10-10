@@ -1,0 +1,50 @@
+.checkout-point {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .checkout-point {
+    display: block;
+  }
+
+  .checkup-point-address {
+    margin-top: 3px;
+    color: var(--black);
+
+    /* Сайт/Caption */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+  }
+
+  .checkup-point-dates {
+    position: relative;
+    width: fit-content;
+    margin-top: 5px;
+    color: var(--magenta);
+
+    /* Сайт/Caption */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+
+  }
+
+  
+  .checkup-point-dates> .checkup-point-dates__underline {
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .checkup-point-dates> .checkup-point-dates__underline> svg> path{
+    stroke: var(--magenta);
+  }
+}

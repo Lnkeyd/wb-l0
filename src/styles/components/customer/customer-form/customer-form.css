@@ -112,3 +112,13 @@
     width: 180px;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .customer-form__name, .customer-form__surname {
+    width: 338px;
+  }
+
+  .customer-form__email, .customer-form__phone, .customer-form__tax-id {
+    width: 217px;
+  }
+}

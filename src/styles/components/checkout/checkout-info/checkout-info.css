@@ -4,3 +4,9 @@
     border-radius: 8px;
     margin-top: 16px;
 }
+
+@media screen and (min-width: 1024px) {
+    .delivery-info.checkout-info {
+        margin-top: 13px;
+    }
+}

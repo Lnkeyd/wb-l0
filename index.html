@@ -344,7 +344,14 @@
               <div class="product-description__title">
                 Футболка UZcotton мужская
               </div>
-              <div class="product-description__color">Цвет: белый</div>
+              <div class="product-description__color">Цвет: белый
+                <span class="product-description__desktop-size"
+                  >Размер:
+                  <span class="product-description__desktop-size-value"
+                    >56</span
+                  ></span
+                >
+              </div>
             </div>
             <div class="product-buttons-wrap missing-item-buttons-wrap">
               <div class="product-buttons-wrap-icons">
@@ -419,7 +426,8 @@
             </div>
             <div class="product-description missing-item-description">
               <div class="product-description__title">
-                Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell 
+                Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                заточенные, шестигранные, Faber-Castell
               </div>
               <div class="product-description__color">Цвет: белый</div>
             </div>
@@ -591,7 +599,9 @@
       <section class="checkout">
         <div class="checkout-with-sale">
           <div class="checkout-with-sale__title section-title">Итого</div>
-          <div class="checkout-with-sale__value">2 101 063 сом</div>
+          <div class="checkout-with-sale__value">
+            2 101 063 <span class="checkout-with-sale__curr">сом</span>
+          </div>
         </div>
         <div class="checkout-without-sale">
           <div class="checkout-without-sale__title">203 товара</div>
@@ -606,17 +616,80 @@
           <div class="checkout-delivery__value">Бесплатно</div>
         </div>
 
+        <div class="checkout-point">
+          <div class="checkout-point-header check-header">
+            <div class="checkout-point-header__title check-title">
+              Доставка в пункт выдачи
+            </div>
+            <div class="checkout-point-header__icon check-icon">
+              <img
+                class="checkout-point-header__icon_img"
+                src="/public/images/icons/pencil.svg"
+                alt="Изменить"
+              />
+            </div>
+          </div>
+          <div class="checkup-point-address">
+            Бишкек, улица Ахматбека Суюмбаева, 12/1
+          </div>
+          <div class="checkup-point-dates">
+            <span class="checkup-point-dates__start">5</span
+            ><span class="checkup-point-dates__dash">–</span
+            ><span class="checkup-point-dates__end">8</span>
+            <span class="checkup-point-dates__month">фев</span>
+            <div class="checkup-point-dates__underline">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="2"
+                viewBox="0 0 64 2"
+                fill="none"
+              >
+                <path
+                  d="M1 0.970703H63"
+                  stroke="#0CB477"
+                  stroke-opacity="0.2"
+                  stroke-linecap="square"
+                  stroke-dasharray="4 2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         <div class="delivery-info checkout-info">
           <div class="delivery-info__icon">
             <img src="/public/images/icons/shipping-info.svg" alt="" />
           </div>
           <div class="delivery-info__text">
-            Обратная доставка товаров на склад при отказе&nbsp;—&nbsp;<span
+            Обратная доставка товаров на склад при отказе —  <span
               class="delivery-info__text_accent"
               >бесплатно</span
             >
           </div>
         </div>
+        <div class="checkout-card">
+          <div class="checkout-card-header check-header">
+            <div class="checkout-card-header__title check-title">
+              Оплата картой
+            </div>
+            <div class="checkout-card-header__icon check-icon">
+              <img
+                class="checkout-card-header__icon_img"
+                src="/public/images/icons/pencil.svg"
+                alt="Изменить"
+              />
+            </div>
+          </div>
+
+          <div class="checkout-card-content">
+            <div class="checkout-card-content__icon">
+              <img src="/public/images/icons/card-mir.svg" alt="Карта Мир" />
+            </div>
+            <div class="checkout-card-content__number">1234 12•• •••• 1234</div>
+          </div>
+        </div>
+
         <div class="checkout-instant-pay">
           <label class="check-label checkout-instant-pay-label">
             <input class="check__input" type="checkbox" />
@@ -642,8 +715,7 @@
             <a class="checkout-terms-links-item" href="#"
               ><span class="checkout-terms-links-item__underline">
                 с правилами пользования торговой площадкой
-              </span></a
-            >и<a class="checkout-terms-links-item" href="#">
+              </span></a>и<a class="checkout-terms-links-item" href="#">
               <span class="checkout-terms-links-item__underline">
                 возврата
               </span>

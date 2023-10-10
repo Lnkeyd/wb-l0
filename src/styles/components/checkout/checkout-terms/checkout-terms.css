@@ -34,3 +34,15 @@
   border-bottom: 1px solid var(--hr-color);
   line-height: 0.85;
 }
+
+@media screen and (min-width: 1024px) {
+  .checkout-terms-links {
+    max-width: 218px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .checkout-terms-links {
+    max-width: 100%;
+  }
+}

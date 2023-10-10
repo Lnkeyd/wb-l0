@@ -32,7 +32,6 @@
 }
 
 html {
-  /* https://www.youtube.com/watch?v=7judyqwqmKo */
   height: 100dvh;
 }
 
@@ -46,10 +45,6 @@ main {
   background-color: var(--smoky);
 }
 
-/* main > section {
-  padding: 0 var(--padding-mobile);
-} */
-
 header,
 section,
 footer {
@@ -60,14 +55,11 @@ footer {
   main {
     padding-bottom: 49.5px;
     display: grid;
-    grid-template-columns: minmax(695px, 695px) auto;
+    /* !TODO: */
+    /* grid-template-columns: minmax(695px, auto) minmax(303px, 453px);
+     */
+    grid-template-columns: minmax(695px, auto) minmax(328px, 453px);
     grid-template-rows: auto auto auto auto auto;
-  }
-
-  .checkout {
-    display: none;
-    grid-column-start: 2;
-    grid-row-start: 1;
   }
 
   section:not(.checkout) {

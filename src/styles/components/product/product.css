@@ -150,7 +150,7 @@
 
 .product-description__color {
   color: var(--black);
-  margin-top: 3px;
+  margin-top: 7px;
 
   /* Сайт/Caption */
   font-family: Segoe UI;
@@ -262,7 +262,9 @@
 @media screen and (min-width: 1024px) {
   .product-wrapper {
     display: grid;
-    grid-template-columns: 106px auto auto auto;
+    /* !TODO: */
+    /* grid-template-columns: 106px auto auto auto; */
+    grid-template-columns: 106px auto 1fr 131px;
     grid-template-rows: auto;
   }
 
@@ -364,6 +366,10 @@
   .product-description-company__info > img {
     margin-left: 7.5px;
     margin-top: 2px;
+  }
+
+  .product-description__color {
+    margin-top: 3px;
   }
 
   .product-buttons-wrap {

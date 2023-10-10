@@ -1,0 +1,33 @@
+.checkout-card {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .checkout-card {
+    display: block;
+  }
+  .checkout-card-content {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-top: 2px;
+    margin-left: 3px;
+  }
+
+  .checkout-card-content__icon {
+    height: 24px;
+    border-radius: 4px;
+    background: var(--smoky, #f6f6fa);
+  }
+
+  .checkout-card-content__number {
+    color: var(--black, #000);
+
+    /* Сайт/Подпись */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+  }
+}

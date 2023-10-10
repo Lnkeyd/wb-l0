@@ -1,11 +1,67 @@
-@import url('./checkout-info/checkout-info.css');
-@import url('./checkout-text/checkout-text.css');
-@import url('./checkout-instant-pay/checkout-instant-pay.css');
-@import url('./checkout-order/checkout-order.css');
-@import url('./checkout-terms/checkout-terms.css');
+@import url("./checkout-info/checkout-info.css");
+@import url("./checkout-text/checkout-text.css");
+@import url("./checkout-instant-pay/checkout-instant-pay.css");
+@import url("./checkout-order/checkout-order.css");
+@import url("./checkout-terms/checkout-terms.css");
+@import url("./checkout-point/checkout-point.css");
+@import url("./checkout-card/checkout-card.css");
 
 .checkout {
-    margin-top: 16px;
-    padding-top: 8px;
-    padding-bottom: 40px;
+  margin-top: 16px;
+  padding-top: 8px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .checkout {
+    height: fit-content;
+    margin-top: 22px;
+    padding: 16px 24px 24px 24px;
+    margin-right: 24px;
+    border-radius: 16px;
+    background: var(--white);
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    /* Тени/Итого, Выпадающие списки */
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+      0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .checkout-with-sale__value {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.24px;
+  }
+
+  .checkout-with-sale__curr {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+
+  .check-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+  }
+
+  .check-title {
+    color: var(--black);
+
+    /* Сайт/H4 */
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+  }
+
+  .check-icon>img {
+    margin-top: 2px;
+  }
+  
 }
