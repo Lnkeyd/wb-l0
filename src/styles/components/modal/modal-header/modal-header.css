@@ -1,0 +1,22 @@
+.modal-header {
+    padding-left: 16px;
+    padding-right: 11px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-header__title {
+    color: var(--black);
+  
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.5px;
+  }
+  
+  .modal-item__delete:hover > svg path {
+    fill: var(--orange);
+  }
+  

@@ -1,0 +1,153 @@
+@import url("./modal-delivery/modal-delivery.css");
+@import url("./modal-payment/modal-payment.css");
+@import url("./modal-header/modal-header.css");
+
+.modal-payment,
+.modal-delivery {
+  display: none;
+}
+
+.modal-delivery-header__close,
+.modal-payment-header__close {
+  cursor: pointer;
+}
+
+.modal-payment_active,
+.modal-delivery_active {
+  height: 100dvh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  z-index: 2;
+
+  padding-top: 18px;
+  padding-bottom: 24px;
+}
+
+/* CUSTOM radio-CHECKMARK */
+
+/* Hide the browser's default radio button */
+.radio-container {
+  position: relative;
+  pointer-events: none;
+}
+
+.radio-container input {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-label {
+  margin-left: 28px;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  pointer-events: auto;
+  position: absolute;
+  cursor: pointer;
+  top: 8px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  background-color: inherit;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* On mouse-over, add a grey background color */
+.radio-checkmark:hover {
+  background-color: #e6e3e3;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: var(--magenta);
+  border: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.modal-button-wrap {
+  padding: 0 16px;
+}
+
+.modal-action-button {
+  width: 100%;
+  display: flex;
+  height: 44px;
+  padding: 0px 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  cursor: pointer;
+
+  border-radius: 8px;
+  background: var(--light-system-magenta, #cb11ab);
+
+  /* Тень в прокрутке */
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+
+  color: var(--white, #fff);
+
+  /* Сайт/H4 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+
+.black-blur {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  body.modal_active .black-blur {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(5, 0, 10, 0.3);
+  }
+
+  .modal-action-button {
+    width: 164px;
+  }
+}

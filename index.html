@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/imports.css" />
     <title>Товары и точка</title>
+    <script src="./src/scripts/modals.js" defer></script>
+    <script src="./src/scripts/counters.js" defer></script>
   </head>
-  <body>
+  <body class="">
     <!-- Mobile Header Start -->
     <header class="mobile-header">
       <div class="mobile-menu">
@@ -107,7 +109,7 @@
         </a>
       </div>
     </header>
-    <!-- Desctop Header End -->
+    <!-- Desktop Header End -->
     <main class="sections">
       <section class="cart">
         <div class="cart__label">Корзина</div>
@@ -135,9 +137,8 @@
               </label>
               <div class="product__size">56</div>
             </div>
-            <h4 class="product__price">
-              522 <span class="product__price-currency">сом</span
-              ><span class="product__price_old">1051 сом</span>
+            <h4 class="product__price"><span class="product__price-value">522</span> <span class="product__price-currency">сом </span
+              ><span class="product__price_old"><span class="product__price_old-value">1051</span> сом</span>
             </h4>
             <div class="product-description">
               <div class="product-description__title">
@@ -167,7 +168,7 @@
                 <div class="product-buttons-wrap-counter__minus">
                   <img src="/public/images/icons/minus.svg" alt="decrease" />
                 </div>
-                <div class="product-buttons-wrap-counter__count">2</div>
+                <div class="product-buttons-wrap-counter__count">1</div>
                 <div class="product-buttons-wrap-counter__plus">
                   <img src="/public/images/icons/plus.svg" alt="increase" />
                 </div>
@@ -207,9 +208,8 @@
               </label>
               <div class="product__size">56</div>
             </div>
-            <h4 class="product__price product__price_small">
-              2 100 047 <span class="product__price-currency">сом</span
-              ><span class="product__price_old">2 300 047 сом</span>
+            <h4 class="product__price product__price_small"><span class="product__price-value">2 100 047</span> <span class="product__price-currency">сом </span
+              ><span class="product__price_old"><span class="product__price_old-value">2 300 047</span> сом</span>
             </h4>
             <div class="product-description">
               <div class="product-description__title">
@@ -233,11 +233,13 @@
                 <div class="product-buttons-wrap-counter__minus">
                   <img src="/public/images/icons/minus.svg" alt="decrease" />
                 </div>
-                <div class="product-buttons-wrap-counter__count">1</div>
+                <div class="product-buttons-wrap-counter__count">200</div>
                 <div class="product-buttons-wrap-counter__plus">
                   <img src="/public/images/icons/plus.svg" alt="increase" />
                 </div>
               </div>
+
+              <div class="product-buttons-wrap-items-left"></div>
 
               <div class="product-buttons-wrap-icons">
                 <div class="product-buttons-wrap-icons__fav">
@@ -270,9 +272,8 @@
               </label>
               <div class="product__size">56</div>
             </div>
-            <h4 class="product__price">
-              494 <span class="product__price-currency">сом</span
-              ><span class="product__price_old">1051 сом</span>
+            <h4 class="product__price"><span class="product__price-value">494</span> <span class="product__price-currency">сом </span
+              ><span class="product__price_old"><span class="product__price_old-value">950</span> сом</span>
             </h4>
             <div class="product-description">
               <div class="product-description__title">
@@ -344,7 +345,8 @@
               <div class="product-description__title">
                 Футболка UZcotton мужская
               </div>
-              <div class="product-description__color">Цвет: белый
+              <div class="product-description__color">
+                Цвет: белый
                 <span class="product-description__desktop-size"
                   >Размер:
                   <span class="product-description__desktop-size-value"
@@ -451,7 +453,7 @@
       <section class="delivery">
         <div class="delivery-header">
           <div class="section-title">Способ доставки</div>
-          <div class="section-button">Изменить</div>
+          <div class="section-button delivery-change-button">Изменить</div>
         </div>
         <div class="delivery-point">
           <div class="delivery-point-wrapper">
@@ -551,7 +553,11 @@
         </div>
         <div class="payment-card">
           <div class="payment-card__icon">
-            <img src="/public/images/icons/card-mir.svg" alt="card mir" />
+            <img
+              class="payment-card-image"
+              src="/public/images/icons/card-mir.svg"
+              alt="card mir"
+            />
           </div>
           <div class="payment-card__number">1234 56•• •••• 1234</div>
           <div class="payment-card__date">01/30</div>
@@ -600,16 +606,16 @@
         <div class="checkout-with-sale">
           <div class="checkout-with-sale__title section-title">Итого</div>
           <div class="checkout-with-sale__value">
-            2 101 063 <span class="checkout-with-sale__curr">сом</span>
+            <span class="checkout-with-sale__value-sum">2 101 063</span> <span class="checkout-with-sale__curr">сом</span>
           </div>
         </div>
         <div class="checkout-without-sale">
-          <div class="checkout-without-sale__title">203 товара</div>
-          <div class="checkout-without-sale__value">2 302 048 сом</div>
+          <div class="checkout-without-sale__title"><span class="checkout-without-sale__title-count">203</span> товара</div>
+          <div class="checkout-without-sale__value"><span class="checkout-without-sale__value-sum">2 302 048</span> сом</div>
         </div>
         <div class="checkout-sale">
           <div class="checkout-sale__title">Скидка</div>
-          <div class="checkout-sale__value">−200 985 сом</div>
+          <div class="checkout-sale__value"><span class="checkout-sale__value-sum">−200 985</span> сом</div>
         </div>
         <div class="checkout-delivery">
           <div class="checkout-delivery__title">Доставка</div>
@@ -662,10 +668,8 @@
             <img src="/public/images/icons/shipping-info.svg" alt="" />
           </div>
           <div class="delivery-info__text">
-            Обратная доставка товаров на склад при отказе —  <span
-              class="delivery-info__text_accent"
-              >бесплатно</span
-            >
+            Обратная доставка товаров на склад при отказе —
+            <span class="delivery-info__text_accent">бесплатно</span>
           </div>
         </div>
         <div class="checkout-card">
@@ -715,7 +719,8 @@
             <a class="checkout-terms-links-item" href="#"
               ><span class="checkout-terms-links-item__underline">
                 с правилами пользования торговой площадкой
-              </span></a>и<a class="checkout-terms-links-item" href="#">
+              </span></a
+            >и<a class="checkout-terms-links-item" href="#">
               <span class="checkout-terms-links-item__underline">
                 возврата
               </span>
@@ -756,5 +761,589 @@
         </li>
       </ul>
     </nav>
+
+    <div class="modal-payment">
+      <div class="modal-payment-container">
+        <div class="modal-payment-header modal-header">
+          <div class="modal-payment-header__title modal-header__title">
+            Способ оплаты
+          </div>
+          <div class="modal-payment-header__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.92912 17.6569C4.5386 18.0474 4.5386 18.6806 4.92912 19.0711C5.31965 19.4616 5.95281 19.4616 6.34334 19.0711L12.0002 13.4143L17.6571 19.0711C18.0476 19.4616 18.6807 19.4616 19.0713 19.0711C19.4618 18.6806 19.4618 18.0474 19.0713 17.6569L13.4144 12L19.0713 6.3432C19.4618 5.95268 19.4618 5.31951 19.0713 4.92899C18.6807 4.53846 18.0476 4.53846 17.657 4.92899L12.0002 10.5858L6.34335 4.92899C5.95282 4.53846 5.31966 4.53846 4.92913 4.92899C4.53861 5.31951 4.53861 5.95268 4.92913 6.3432L10.586 12L4.92912 17.6569Z"
+                fill="#A0A0A4"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <form class="modal-payment-form">
+          <div class="modal-payment-item">
+            <label class="modal-payment-item radio-container">
+              <input
+                type="radio"
+                id="payment1"
+                name="credit-card"
+                class="modal-payment__radio"
+              />
+              <span class="modal-payment__checkmark radio-checkmark"></span>
+              <div class="modal-payment__image">
+                <img src="/public/images/icons/card-mir.svg" alt="мир" />
+              </div>
+              <div class="modal-payment__label">1234 56•• •••• 1234</div>
+            </label>
+          </div>
+          <div class="modal-payment-item">
+            <label class="modal-payment-item radio-container">
+              <input
+                type="radio"
+                id="payment2"
+                name="credit-card"
+                value="1234 56•• •••• 1234"
+                class="modal-payment__radio"
+              />
+              <span class="modal-payment__checkmark radio-checkmark"></span>
+              <div class="modal-payment__image">
+                <img src="/public/images/icons/card-visa.svg" alt="виза" />
+              </div>
+              <div class="modal-payment__label">1234 56•• •••• 1234</div>
+            </label>
+          </div>
+          <div class="modal-payment-item">
+            <label class="modal-payment-item radio-container">
+              <input
+                type="radio"
+                id="payment3"
+                name="credit-card"
+                value="1234 56•• •••• 1234"
+                class="modal-payment__radio"
+              />
+              <span class="modal-payment__checkmark radio-checkmark"></span>
+              <div class="modal-payment__image">
+                <img
+                  src="/public/images/icons/card-mastercard.svg"
+                  alt="мастер кард"
+                />
+              </div>
+              <div class="modal-payment__label">1234 56•• •••• 1234</div>
+            </label>
+          </div>
+          <div class="modal-payment-item">
+            <label class="modal-payment-item radio-container">
+              <input
+                type="radio"
+                id="payment4"
+                name="credit-card"
+                value="1234 56•• •••• 1234"
+                class="modal-payment__radio"
+              />
+              <span class="modal-payment__checkmark radio-checkmark"></span>
+              <div class="modal-payment__image">
+                <img
+                  src="/public/images/icons/card-maestro.svg"
+                  alt="маэстро"
+                />
+              </div>
+              <div class="modal-payment__label">1234 56•• •••• 1234</div>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-button-wrap">
+        <button type="submit" class="modal-action-button modal-payment-submit">
+          Выбрать
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-delivery">
+      <div class="modal-delivery-container">
+        <div class="modal-delivery-header modal-header">
+          <div class="modal-delivery-header__title">Способ доставки</div>
+          <div class="modal-delivery-header__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.92912 17.6569C4.5386 18.0474 4.5386 18.6806 4.92912 19.0711C5.31965 19.4616 5.95281 19.4616 6.34334 19.0711L12.0002 13.4143L17.6571 19.0711C18.0476 19.4616 18.6807 19.4616 19.0713 19.0711C19.4618 18.6806 19.4618 18.0474 19.0713 17.6569L13.4144 12L19.0713 6.3432C19.4618 5.95268 19.4618 5.31951 19.0713 4.92899C18.6807 4.53846 18.0476 4.53846 17.657 4.92899L12.0002 10.5858L6.34335 4.92899C5.95282 4.53846 5.31966 4.53846 4.92913 4.92899C4.53861 5.31951 4.53861 5.95268 4.92913 6.3432L10.586 12L4.92912 17.6569Z"
+                fill="#A0A0A4"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="modal-delivery-buttons">
+          <button
+            class="modal-delivery__button modal-delivery__point modal-delivery__button_active"
+          >
+            В пункт выдачи
+          </button>
+          <button
+            class="modal-delivery__button modal-delivery__courier modal-delivery__button"
+          >
+            Курьером
+          </button>
+        </div>
+        <div class="modal-delivery-addresses">
+          <div class="modal-delivery-addresses__header">Мои адреса</div>
+          <form class="modal-delivery-form">
+            <div
+              class="modal-delivery-form-items modal-delivery-point-items modal-delivery-point-items_active"
+            >
+              <!-- ITEM 1 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio1"
+                    name="address"
+                    value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating"></div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class=" modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 1 END -->
+              <!-- ITEM 2 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio2"
+                    name="address"
+                    value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating">4.99</div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class=" modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 2 END -->
+              <!-- ITEM 3 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio3"
+                    name="address"
+                    value="г. Бишкек, улица Табышалиева, д. 57"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      г. Бишкек, улица Табышалиева, д. 57
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating">4.99</div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class=" modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 3 END -->
+            </div>
+
+            <div class="modal-delivery-form-items modal-delivery-courier-items">
+              <!-- ITEM 1 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio1"
+                    name="address"
+                    value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      Бишкек, улица Табышалиева, 57
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating"></div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class=" modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 1 END -->
+              <!-- ITEM 2 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio2"
+                    name="address"
+                    value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      Бишкек, улица Жукеева-Пудовкина, 77/1
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating">4.99</div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class=" modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 2 END -->
+              <!-- ITEM 3 START -->
+              <div class="modal-delivery-form-item">
+                <label class="radio-container">
+                  <input
+                    type="radio"
+                    id="radio3"
+                    name="address"
+                    value="г. Бишкек, улица Табышалиева, д. 57"
+                    class="modal-delivery__radio"
+                  />
+                  <span
+                    class="modal-delivery__checkmark radio-checkmark"
+                  ></span>
+                  <div class="modal-delivery-form-item-wrap radio-label">
+                    <div class="modal-delivery-item-wrap__label">
+                      Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+                    </div>
+                    <div class="modal-delivery-rating-wrap">
+                      <div class="modal-delivery-rating-wrap__star">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                            fill="#FF970D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="modal-delivery-rating-wrap__rating">4.99</div>
+                      <div class="modal-delivery-rating-wrap__name">
+                        Пункт выдачи
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <div class="modal-item-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                      fill="#9797AF"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- ITEM 3 END -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-button-wrap">
+        <button type="submit" class="modal-action-button modal-delivery-submit">
+          Выбрать
+        </button>
+      </div>
+    </div>
+    <div class="black-blur"></div>
   </body>
 </html>
