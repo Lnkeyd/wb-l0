@@ -79,6 +79,15 @@ div {
     grid-column-end: 2;
   }
 
+  .grid.left {
+    grid-column: 1 / span 1;
+    grid-auto-rows: min-content;
+  }
+  .grid.right {
+    grid-column: span 1 / -1;
+    grid-auto-rows: min-content;
+  }
+
   section:not(.checkout).customer,
   section:not(.checkout).payment,
   section:not(.checkout).delivery {

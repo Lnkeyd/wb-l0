@@ -21,13 +21,12 @@
   position: relative;
 }
 
-.mobile-nav-cart::before {
-  content: "3";
+.mobile-cart.cart-count {
   position: absolute;
   top: -2.6px;
   right: -6px;
 
-  padding: 0 2px;
+  padding: 0 5px;
   height: 16px;
   min-width: 12px;
   display: flex;

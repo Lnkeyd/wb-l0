@@ -40,6 +40,7 @@ plus.forEach((item) =>
         /[^0-9]/g,
         ""
       );
+
     withoutSale.textContent = Math.floor(
       Number(oldPriceItemValue) / value +
         Number(withoutSale.textContent.replace(/[^0-9]/g, ""))
@@ -82,12 +83,13 @@ plus.forEach((item) =>
     // Прибавили счётчик = продуктов на складе стало на 1 меньше
     if (!!productLeft?.textContent)
       productLeft.textContent = Number(productLeft.textContent) - 1;
+    //Обновление количества товаров на иконкe корзины
+    
   })
 );
 
 minus.forEach((item) =>
   item.addEventListener("click", () => {
-    // Где в коде прев, там ставишь некст
     const value = Number(item.nextElementSibling.textContent);
     if (value > 1) {
       // Основной текст

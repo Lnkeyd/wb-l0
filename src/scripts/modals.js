@@ -5,11 +5,13 @@ let scrollY = 0;
 const deliveryModalClose = document.querySelector(
   ".modal-delivery-header__close"
 );
+
 const deliverySubmit = document.querySelector(".modal-delivery-submit");
 
 const paymentModalClose = document.querySelector(
   ".modal-payment-header__close"
 );
+
 const paymentChangeButton = document.querySelector(".payment-header__change");
 
 // Delivery event listeners

@@ -28,6 +28,8 @@
 }
 
 .delivery-info__text_accent {
+  cursor: pointer;
+  display: inline-block;
   color: var(--green);
   position: relative;
 
@@ -39,6 +41,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: 16px; /* 123.077% */
+
+  position: relative;
 }
 
 .delivery-info__text_accent::after {
@@ -54,7 +58,32 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px){
+.delivery-popup {
+  position: absolute;
+  max-width: 288px;
+  bottom: -62px;
+  
+  border-radius: 8px;
+  background: var(--background-white, #fff);
+
+  /* Тени/Итого, Выпадающие списки */
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  width: 288px;
+  padding: 10px 16px 14px 16px;
+
+  color: var(--black);
+  /* Сайт/Caption */
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+  z-index: 1;
+}
+
+
+@media screen and (min-width: 1024px) {
   .delivery-info {
     margin-top: 15px;
     padding: 0;

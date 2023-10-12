@@ -253,12 +253,20 @@
   align-items: center;
 }
 
-.product-buttons-wrap-icons__fav > img {
+.product-buttons-wrap-icons__fav > svg {
   cursor: pointer;
 }
 
-.product-buttons-wrap-icons__delete > img {
+.product-buttons-wrap-icons__fav > svg:hover path {
+  fill: var(--magenta);
+}
+
+.product-buttons-wrap-icons__delete > svg {
   cursor: pointer;
+}
+
+.product-buttons-wrap-icons__delete > svg:hover path {
+  fill: var(--orange);
 }
 
 @media screen and (min-width: 1024px) {
@@ -341,6 +349,7 @@
   .product-description-company {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .product-description-company__text {
@@ -362,7 +371,60 @@
   }
 
   .product-description-company__info {
+    cursor: pointer;
     height: 20px;
+  }
+
+  .product-description-company-popup {
+    display: none;
+  }
+
+  .product-description-company__info:hover
+    + .product-description-company-popup {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    row-gap: 8px;
+    position: absolute;
+    bottom: -110px;
+    padding: 11px 16px 13px 16px;
+    border-radius: 16px;
+    background-color: var(--white);
+    z-index: 1;
+
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+      0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-description-company-popup__title {
+    color: var(--black);
+
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 123.077% */
+  }
+
+  .product-description-company-popup__reg {
+    color: var(--black);
+
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+  }
+
+  .product-description-company-popup__address {
+    color: var(--black);
+
+    /* Сайт/Caption */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
   }
 
   .product-description-company__info > img {
