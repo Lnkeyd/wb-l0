@@ -26,27 +26,52 @@ infos.forEach((icon) => {
   });
 });
 
-const frees = document.querySelectorAll(".delivery-info__text_accent");
+const deliveryFreeInfo = document.querySelector(".delivery-ship-info");
 
-console.log(frees);
+const deliveryCheckoutInfo = document.querySelector(".checkout-info");
 
-frees.forEach((text, index) => {
-  text.addEventListener("mouseenter", () => {
+// Элемент в "Способ доставки"
+deliveryFreeInfo.addEventListener("mouseenter", () => {
+  let popup = document.createElement("div");
+  popup.className = "delivery-popup";
+  popup.textContent =
+    "Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно";
+
+  popup.style = `
+        bottom: -62px;
+        right: 50%;
+        transform: translateX(50%);`;
+
+  deliveryFreeInfo.append(popup);
+});
+
+deliveryFreeInfo.addEventListener("mouseleave", () => {
+  deliveryFreeInfo.lastElementChild.remove();
+});
+
+// Элемент в "Итого"
+
+deliveryCheckoutInfo.lastElementChild.lastElementChild.addEventListener(
+  "mouseenter",
+  () => {
+    console.log("ENTERED");
     let popup = document.createElement("div");
     popup.className = "delivery-popup";
     popup.textContent =
       "Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно";
 
-      if (index === 0) {
-        popup.style = `right: 50%;
-        transform: translateX(50%);`
-      } else {
-        popup.style = `right: 50%;
-        transform: translateX(22%);`
-      }
-    text.append(popup);
-  });
-  text.addEventListener("mouseleave", () => {
-    text.firstElementChild.remove();
-  });
-});
+    popup.style = `
+        bottom: -50px;
+        right: 50%;
+        transform: translateX(50%);`;
+
+    deliveryCheckoutInfo.append(popup);
+  }
+);
+
+deliveryCheckoutInfo.lastElementChild.lastElementChild.addEventListener(
+  "mouseleave",
+  () => {
+    deliveryCheckoutInfo.lastElementChild.remove();
+  }
+);

@@ -3,6 +3,7 @@
   align-items: center;
   margin-top: 20px;
   padding: 0 8px;
+  position: relative;
 }
 
 .delivery-info__text {
@@ -61,7 +62,6 @@
 .delivery-popup {
   position: absolute;
   max-width: 288px;
-  bottom: -62px;
   
   border-radius: 8px;
   background: var(--background-white, #fff);
