@@ -59,7 +59,7 @@
   }
 
   .missing-container {
-    margin-top: 34px;
+    margin-top: 43px;
   }
 
   .accordeon {
@@ -94,7 +94,7 @@
     margin-top: 0;
   }
 
-  .missing-item-buttons-wrap>.product-buttons-wrap-icons {
+  .missing-item-buttons-wrap > .product-buttons-wrap-icons {
     margin-top: 0;
     margin-right: 125px;
   }

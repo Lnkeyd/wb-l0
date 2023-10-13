@@ -1,13 +1,6 @@
-/* .cart__button {
-    height: 20px;
-    width: 20px;
-    border: none;
-    background-color: inherit;
-    background-image: url('../../../../../public/images/icons/arrow.svg');
-    margin-right: 4px;
-
-    cursor: pointer;
-} */
+.accordeon.accordeon_reversed {
+  transform: rotate(180deg);
+}
 
 @media screen and (min-width: 1024px) {
   .cart__button.accordeon {

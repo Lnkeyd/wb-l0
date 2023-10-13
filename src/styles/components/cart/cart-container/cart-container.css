@@ -1,12 +1,32 @@
 .cart-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-container-title {
+  display: none;
+}
+
+.cart-container-title.cart-container-title_active {
+  display: flex;
+  color: var(--black, #000);
+  margin-bottom: 16px;
+  margin-top: 14px;
+
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+.cart-container-title_active + .check-label {
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .cart-container {
-      margin-top: 16px;
-    }
+  .cart-container {
+    margin-top: 16px;
   }
-  
+}

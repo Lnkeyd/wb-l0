@@ -2,6 +2,10 @@
   margin-bottom: 13px;
 }
 
+.product.product_hidden {
+  display: none;
+}
+
 .cart-item-wrapper {
   display: grid;
   grid-template-columns: 81px 1fr;
@@ -251,9 +255,3 @@
 .cart-item-buttons-wrap-icons__delete > img {
   cursor: pointer;
 }
-
-/* 
-    [a] [b]
-    [a] [c]
-    [ d d ]
-*/

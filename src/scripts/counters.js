@@ -14,6 +14,15 @@ const itemsCount = document.querySelector(
 // оставляем только числа
 // .replace(/[^0-9]/g,"")
 
+function updateInstantPayButton() {
+  const payCheckbox = document.querySelector("#instant-pay__input");
+  const payButton = document.querySelector(".instant-pay__button");
+
+  if (payCheckbox.checked) {
+    payButton.textContent = `Оплатить ${FINAL_PRICE.toLocaleString()} ${PRICE_CURR}`;
+  }
+}
+
 plus.forEach((item) =>
   item.addEventListener("click", () => {
     const value = Number(item.previousElementSibling.textContent);
@@ -41,10 +50,13 @@ plus.forEach((item) =>
         ""
       );
 
-    withoutSale.textContent = Math.floor(
+    // ВСЯ цена БЕЗ скидки (В Итого)
+    OLD_PRICE = Math.floor(
       Number(oldPriceItemValue) / value +
         Number(withoutSale.textContent.replace(/[^0-9]/g, ""))
-    ).toLocaleString();
+    );
+
+    withoutSale.textContent = OLD_PRICE.toLocaleString();
 
     const newPriceItem =
       item.parentElement.parentElement.previousElementSibling
@@ -54,25 +66,29 @@ plus.forEach((item) =>
       item.parentElement.parentElement.previousElementSibling
         .previousElementSibling.lastElementChild.firstElementChild;
 
-    // Со скидкой
+    // Цена по одному товару со скидкой
     newPriceItem.textContent = Math.floor(
       Number(newPriceItemValue) / value + Number(newPriceItemValue)
     ).toLocaleString();
 
-    // Без скидки
+    // Цена по одному товару без скидки
     oldPriceItem.textContent = Math.floor(
       Number(oldPriceItemValue) / value + Number(oldPriceItemValue)
     );
 
     // Количество
     itemsCount.textContent = Number(itemsCount.textContent) + 1;
-    finalPrice.textContent = Math.floor(
+
+    // ВСЯ цена со скидкой (В Итого)
+    FINAL_PRICE = Math.floor(
       Number(finalPrice.textContent.replace(/[^0-9]/g, "")) +
         Number(newPriceItemValue) / value
-    ).toLocaleString();
+    );
 
+    finalPrice.textContent = FINAL_PRICE.toLocaleString();
+
+    // Увеличиваем Counter
     item.previousElementSibling.textContent = value + 1;
-    console.log(item.previousElementSibling);
 
     sale.textContent = (
       (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
@@ -83,8 +99,9 @@ plus.forEach((item) =>
     // Прибавили счётчик = продуктов на складе стало на 1 меньше
     if (!!productLeft?.textContent)
       productLeft.textContent = Number(productLeft.textContent) - 1;
-    //Обновление количества товаров на иконкe корзины
-    
+
+    // Если чекбокс "Оплатить сразу" прожат
+    updateInstantPayButton();
   })
 );
 
@@ -113,10 +130,14 @@ minus.forEach((item) =>
         );
       console.log(oldPriceItemValue);
 
-      withoutSale.textContent = Math.floor(
+      // ВСЯ цена БЕЗ скидки (В Итого)
+
+      OLD_PRICE = Math.floor(
         Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
           Number(oldPriceItemValue) / value
-      ).toLocaleString();
+      );
+
+      withoutSale.textContent = OLD_PRICE.toLocaleString();
 
       const newPriceItem =
         item.parentElement.parentElement.previousElementSibling
@@ -139,10 +160,14 @@ minus.forEach((item) =>
       // Количество
       itemsCount.textContent = Number(itemsCount.textContent) - 1;
 
-      finalPrice.textContent = Math.floor(
+      // ВСЯ цена со скидкой (В Итого)
+
+      FINAL_PRICE = Math.floor(
         Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
           Number(newPriceItemValue) / value
-      ).toLocaleString();
+      );
+
+      finalPrice.textContent = FINAL_PRICE.toLocaleString();
 
       item.nextElementSibling.textContent = value - 1;
 
@@ -155,7 +180,9 @@ minus.forEach((item) =>
       // Убавили счётчик = продуктов на складе стало на 1 больше
       if (!!productLeft?.textContent)
         productLeft.textContent = Number(productLeft.textContent) + 1;
-      // Конец основного текста
+
+      // Если чекбокс "Оплатить сразу" прожат
+      updateInstantPayButton();
     }
   })
 );

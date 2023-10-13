@@ -29,6 +29,17 @@
   background-color: var(--hr-color);
 }
 
+.product-accordeon-hr {
+  display: none;
+}
+
+.product-accordeon-hr.product-accordeon-hr_active {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--hr-color);
+}
+
 .product__image {
   width: 81px;
   height: 107px;

@@ -15,11 +15,6 @@ const data = [
     }
 ]
 
-const order = [
-    // itemCount
-    // 
-]
-
 const companies = [
     {
         id: '1',

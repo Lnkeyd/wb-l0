@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/imports.css" />
     <title>Товары и точка</title>
+    <script src="./src/scripts/globals.js" defer></script>
     <script src="./src/scripts/modals.js" defer></script>
     <script src="./src/scripts/counters.js" defer></script>
     <script src="./src/scripts/productDelete.js" defer></script>
     <script type="module" src="./src/scripts/popups.js" defer></script>
+    <script type="module" src="./src/scripts/accordeons.js" defer></script>
+    <script type="module" src="./src/scripts/instantPay.js" defer></script>
+
+    
   </head>
   <body class="">
     <!-- Mobile Header Start -->
@@ -117,6 +122,9 @@
         <section class="cart">
           <div class="cart__label">Корзина</div>
           <div class="cart-container">
+            <div class="cart-container-title">
+              <span class="cart-container-title__count">266</span>&nbsp;товаров&nbsp;·&nbsp;<span class="cart-container-title__price-value">2 100 569</span>&nbsp;сом
+            </div>
             <label class="check-label">
               <input class="check__input" type="checkbox" />
               <span class="check-style"></span>
@@ -481,6 +489,7 @@
             </div>
           </div>
           <!-- End Cart Item 3 -->
+          <div class="product-accordeon-hr"></div>
         </section>
         <section class="missing">
           <div class="missing-container">
@@ -488,7 +497,7 @@
               Отсутствуют ·
               <span class="missing-container__title-count">3</span> товара
             </div>
-            <div class="accordeon"></div>
+            <div class="accordeon missing__button"></div>
           </div>
           <!-- Missing Item 1 -->
           <div class="product missing-item" id="cart-missing-product-1">
@@ -1012,7 +1021,7 @@
 
           <div class="checkout-instant-pay">
             <label class="check-label checkout-instant-pay-label">
-              <input class="check__input" type="checkbox" />
+              <input class="check__input" id="instant-pay__input" type="checkbox" />
               <span class="check-style"></span>
               <span class="checkout-instant-pay__text">
                 Списать оплату сразу
@@ -1023,7 +1032,7 @@
             </div>
           </div>
 
-          <button class="checkout-order">Заказать</button>
+          <button class="checkout-order instant-pay__button">Заказать</button>
           <div class="checkout-terms-of-service">
             <img
               class="checkout-terms-of-service__check"
