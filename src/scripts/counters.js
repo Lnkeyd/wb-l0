@@ -14,13 +14,18 @@ const itemsCount = document.querySelector(
 // оставляем только числа
 // .replace(/[^0-9]/g,"")
 
-function updateInstantPayButton() {
+export function updateInstantPayButton() {
   const payCheckbox = document.querySelector("#instant-pay__input");
   const payButton = document.querySelector(".instant-pay__button");
 
   if (payCheckbox.checked) {
     payButton.textContent = `Оплатить ${FINAL_PRICE.toLocaleString()} ${PRICE_CURR}`;
   }
+}
+
+export function updateTitlePrice() {
+  const titlePriceValue = document.querySelector('.cart-container-title__price-value')
+  titlePriceValue.textContent = FINAL_PRICE.toLocaleString()
 }
 
 plus.forEach((item) =>
@@ -102,6 +107,9 @@ plus.forEach((item) =>
 
     // Если чекбокс "Оплатить сразу" прожат
     updateInstantPayButton();
+
+    // Если аккордеон свёрнут
+    updateTitlePrice()
   })
 );
 
@@ -171,11 +179,7 @@ minus.forEach((item) =>
 
       item.nextElementSibling.textContent = value - 1;
 
-      sale.textContent = (
-        (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
-          Number(finalPrice.textContent.replace(/[^0-9]/g, ""))) *
-        -1
-      ).toLocaleString();
+      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
 
       // Убавили счётчик = продуктов на складе стало на 1 больше
       if (!!productLeft?.textContent)
@@ -183,6 +187,10 @@ minus.forEach((item) =>
 
       // Если чекбокс "Оплатить сразу" прожат
       updateInstantPayButton();
+
+      // Если аккордеон свёрнут
+      updateTitlePrice()
     }
   })
 );
+

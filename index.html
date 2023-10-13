@@ -9,13 +9,11 @@
     <title>Товары и точка</title>
     <script src="./src/scripts/globals.js" defer></script>
     <script src="./src/scripts/modals.js" defer></script>
-    <script src="./src/scripts/counters.js" defer></script>
-    <script src="./src/scripts/productDelete.js" defer></script>
+    <script type="module" src="./src/scripts/counters.js" defer></script>
+    <script type="module" src="./src/scripts/productDelete.js" defer></script>
     <script type="module" src="./src/scripts/popups.js" defer></script>
     <script type="module" src="./src/scripts/accordeons.js" defer></script>
     <script type="module" src="./src/scripts/instantPay.js" defer></script>
-
-    
   </head>
   <body class="">
     <!-- Mobile Header Start -->
@@ -123,7 +121,11 @@
           <div class="cart__label">Корзина</div>
           <div class="cart-container">
             <div class="cart-container-title">
-              <span class="cart-container-title__count">266</span>&nbsp;товаров&nbsp;·&nbsp;<span class="cart-container-title__price-value">2 100 569</span>&nbsp;сом
+              <span class="cart-container-title__count">203</span
+              >&nbsp;товаров&nbsp;·&nbsp;<span
+                class="cart-container-title__price-value"
+                >2 101 063</span
+              >&nbsp;сом
             </div>
             <label class="check-label">
               <input class="check__input" type="checkbox" />
@@ -143,7 +145,14 @@
                   class="product__image"
                 />
                 <label class="product__check check-label">
-                  <input class="check__input" type="checkbox" checked />
+                  <input
+                    class="check__input product-check-input"
+                    id="product-check-input-1"
+                    data-price-value="product__price-value-1"
+                    data-old-price-value="product__price_old-value-1"
+                    type="checkbox"
+                    checked
+                  />
                   <span class="check-style"></span>
                 </label>
                 <div class="product__size">56</div>
@@ -180,18 +189,27 @@
                   <div class="product-description-company__text">
                     OOO Вайлдберриз
                   </div>
-                  <div class="product-description-company__info" data-info-id="1">
+                  <div
+                    class="product-description-company__info"
+                    data-info-id="1"
+                  >
                     <img src="/public/images/icons/info.svg" alt="info" />
                   </div>
                 </div>
               </div>
               <div class="product-buttons-wrap">
                 <div class="product-buttons-wrap-counter">
-                  <div class="product-buttons-wrap-counter__minus">
+                  <div
+                    class="product-buttons-wrap-counter__minus"
+                    data-check-id="product-check-input-1"
+                  >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
                   <div class="product-buttons-wrap-counter__count">1</div>
-                  <div class="product-buttons-wrap-counter__plus">
+                  <div
+                    class="product-buttons-wrap-counter__plus"
+                    data-check-id="product-check-input-1"
+                  >
                     <img src="/public/images/icons/plus.svg" alt="increase" />
                   </div>
                 </div>
@@ -218,6 +236,7 @@
                   </div>
                   <div
                     class="product-buttons-wrap-icons__delete"
+                    data-check-id="product-check-input-1"
                     data-missing-id="cart-missing-product-1"
                     data-parent-id="cart-product-1"
                     data-price-value="product__price-value-1"
@@ -267,7 +286,14 @@
                   class="product__image"
                 />
                 <label class="product__check check-label">
-                  <input class="check__input" type="checkbox" checked />
+                  <input
+                    class="check__input product-check-input"
+                    id="product-check-input-2"
+                    data-price-value="product__price-value-2"
+                    data-old-price-value="product__price_old-value-2"
+                    type="checkbox"
+                    checked
+                  />
                   <span class="check-style"></span>
                 </label>
                 <div class="product__size">56</div>
@@ -297,7 +323,10 @@
                   <div class="product-description-company__text">
                     OOO Мегапрофстиль
                   </div>
-                  <div class="product-description-company__info " data-info-id="2">
+                  <div
+                    class="product-description-company__info"
+                    data-info-id="2"
+                  >
                     <img src="/public/images/icons/info.svg" alt="info" />
                   </div>
                 </div>
@@ -305,11 +334,17 @@
 
               <div class="product-buttons-wrap">
                 <div class="product-buttons-wrap-counter">
-                  <div class="product-buttons-wrap-counter__minus">
+                  <div
+                    class="product-buttons-wrap-counter__minus"
+                    data-check-id="product-check-input-2"
+                  >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
                   <div class="product-buttons-wrap-counter__count">200</div>
-                  <div class="product-buttons-wrap-counter__plus">
+                  <div
+                    class="product-buttons-wrap-counter__plus"
+                    data-check-id="product-check-input-2"
+                  >
                     <img src="/public/images/icons/plus.svg" alt="increase" />
                   </div>
                 </div>
@@ -335,6 +370,7 @@
                   </div>
                   <div
                     class="product-buttons-wrap-icons__delete"
+                    data-check-id="product-check-input-2"
                     data-missing-id="cart-missing-product-2"
                     data-parent-id="cart-product-2"
                     data-price-value="product__price-value-2"
@@ -384,7 +420,14 @@
                   class="product__image"
                 />
                 <label class="product__check check-label">
-                  <input class="check__input" type="checkbox" checked />
+                  <input
+                    class="check__input product-check-input"
+                    id="product-check-input-3"
+                    data-price-value="product__price-value-3"
+                    data-old-price-value="product__price_old-value-3"
+                    type="checkbox"
+                    checked
+                  />
                   <span class="check-style"></span>
                 </label>
                 <div class="product__size">56</div>
@@ -413,18 +456,27 @@
                   <div class="product-description-company__text">
                     OOO Вайлдберриз
                   </div>
-                  <div class="product-description-company__info" data-info-id="3">
+                  <div
+                    class="product-description-company__info"
+                    data-info-id="3"
+                  >
                     <img src="/public/images/icons/info.svg" alt="info" />
                   </div>
                 </div>
               </div>
               <div class="product-buttons-wrap">
                 <div class="product-buttons-wrap-counter">
-                  <div class="product-buttons-wrap-counter__minus">
+                  <div
+                    class="product-buttons-wrap-counter__minus"
+                    data-check-id="product-check-input-3"
+                  >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
                   <div class="product-buttons-wrap-counter__count">2</div>
-                  <div class="product-buttons-wrap-counter__plus">
+                  <div
+                    class="product-buttons-wrap-counter__plus"
+                    data-check-id="product-check-input-3"
+                  >
                     <img src="/public/images/icons/plus.svg" alt="increase" />
                   </div>
                 </div>
@@ -451,6 +503,7 @@
                   </div>
                   <div
                     class="product-buttons-wrap-icons__delete"
+                    data-check-id="product-check-input-3"
                     data-missing-id="cart-missing-product-3"
                     data-parent-id="cart-product-3"
                     data-price-value="product__price-value-3"
@@ -839,15 +892,12 @@
               <img src="/public/images/icons/shipping-info.svg" alt="" />
             </div>
             <div class="delivery-info__text">
-              Обратная доставка товаров на склад при отказе&nbsp;—&nbsp;<div
-                class="delivery-info__text_accent delivery-ship-info"
-                >бесплатно
-
-                </div
-              >
+              Обратная доставка товаров на склад при отказе&nbsp;—&nbsp;
+              <div class="delivery-info__text_accent delivery-ship-info">
+                бесплатно
+              </div>
             </div>
           </div>
-
         </section>
         <section class="payment">
           <div class="payment-header">
@@ -1021,7 +1071,11 @@
 
           <div class="checkout-instant-pay">
             <label class="check-label checkout-instant-pay-label">
-              <input class="check__input" id="instant-pay__input" type="checkbox" />
+              <input
+                class="check__input"
+                id="instant-pay__input"
+                type="checkbox"
+              />
               <span class="check-style"></span>
               <span class="checkout-instant-pay__text">
                 Списать оплату сразу
@@ -1072,7 +1126,8 @@
         </li>
         <li class="mobile-nav-cart">
           <a href="#"
-            ><span class="mobile-cart cart-count">3</span><img src="/public/images/icons/nav-cart.svg" alt="Корзина"
+            ><span class="mobile-cart cart-count">3</span
+            ><img src="/public/images/icons/nav-cart.svg" alt="Корзина"
           /></a>
         </li>
         <li>
