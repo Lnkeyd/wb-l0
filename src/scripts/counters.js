@@ -1,3 +1,5 @@
+import { updateAccordeonTitleCount } from "./productDelete.js";
+
 const minus = document.querySelectorAll(".product-buttons-wrap-counter__minus");
 const count = document.querySelectorAll(".product-buttons-wrap-counter__count");
 const plus = document.querySelectorAll(".product-buttons-wrap-counter__plus");
@@ -24,12 +26,16 @@ export function updateInstantPayButton() {
 }
 
 export function updateTitlePrice() {
-  const titlePriceValue = document.querySelector('.cart-container-title__price-value')
-  titlePriceValue.textContent = FINAL_PRICE.toLocaleString()
+  const titlePriceValue = document.querySelector(
+    ".cart-container-title__price-value"
+  );
+  titlePriceValue.textContent = FINAL_PRICE.toLocaleString();
 }
 
 plus.forEach((item) =>
   item.addEventListener("click", () => {
+    const checkbox = document.querySelector(`#${item.dataset.checkId}`);
+
     const value = Number(item.previousElementSibling.textContent);
 
     const productLeft = item.parentElement.nextElementSibling.firstElementChild;
@@ -40,6 +46,8 @@ plus.forEach((item) =>
     )
       return;
 
+    // Увеличиваем Counter
+    item.previousElementSibling.textContent = value + 1;
     // суммарная цена за один товар
     const newPriceItemValue = Number(
       item.parentElement.parentElement.previousElementSibling.previousElementSibling.firstElementChild.textContent.replace(
@@ -54,14 +62,6 @@ plus.forEach((item) =>
         /[^0-9]/g,
         ""
       );
-
-    // ВСЯ цена БЕЗ скидки (В Итого)
-    OLD_PRICE = Math.floor(
-      Number(oldPriceItemValue) / value +
-        Number(withoutSale.textContent.replace(/[^0-9]/g, ""))
-    );
-
-    withoutSale.textContent = OLD_PRICE.toLocaleString();
 
     const newPriceItem =
       item.parentElement.parentElement.previousElementSibling
@@ -81,43 +81,50 @@ plus.forEach((item) =>
       Number(oldPriceItemValue) / value + Number(oldPriceItemValue)
     );
 
-    // Количество
-    itemsCount.textContent = Number(itemsCount.textContent) + 1;
+    if (checkbox.checked) {
+      // Количество
+      itemsCount.textContent = Number(itemsCount.textContent) + 1;
 
-    // ВСЯ цена со скидкой (В Итого)
-    FINAL_PRICE = Math.floor(
-      Number(finalPrice.textContent.replace(/[^0-9]/g, "")) +
-        Number(newPriceItemValue) / value
-    );
+      // ВСЯ цена БЕЗ скидки (В Итого)
+      OLD_PRICE = Math.floor(
+        Number(oldPriceItemValue) / value +
+          Number(withoutSale.textContent.replace(/[^0-9]/g, ""))
+      );
 
-    finalPrice.textContent = FINAL_PRICE.toLocaleString();
+      withoutSale.textContent = OLD_PRICE.toLocaleString();
 
-    // Увеличиваем Counter
-    item.previousElementSibling.textContent = value + 1;
+      // ВСЯ цена со скидкой (В Итого)
+      FINAL_PRICE = Math.floor(
+        Number(finalPrice.textContent.replace(/[^0-9]/g, "")) +
+          Number(newPriceItemValue) / value
+      );
 
-    sale.textContent = (
-      (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
-        Number(finalPrice.textContent.replace(/[^0-9]/g, ""))) *
-      -1
-    ).toLocaleString();
+      finalPrice.textContent = FINAL_PRICE.toLocaleString();
+
+      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+
+      // Если чекбокс "Оплатить сразу" прожат
+      updateInstantPayButton();
+
+      // Если аккордеон свёрнут
+      updateTitlePrice();
+      updateAccordeonTitleCount();
+    }
 
     // Прибавили счётчик = продуктов на складе стало на 1 меньше
     if (!!productLeft?.textContent)
       productLeft.textContent = Number(productLeft.textContent) - 1;
-
-    // Если чекбокс "Оплатить сразу" прожат
-    updateInstantPayButton();
-
-    // Если аккордеон свёрнут
-    updateTitlePrice()
   })
 );
 
 minus.forEach((item) =>
   item.addEventListener("click", () => {
+    const checkbox = document.querySelector(`#${item.dataset.checkId}`);
+
     const value = Number(item.nextElementSibling.textContent);
     if (value > 1) {
       // Основной текст
+      item.nextElementSibling.textContent = value - 1;
 
       const productLeft =
         item.parentElement.nextElementSibling.firstElementChild;
@@ -136,16 +143,6 @@ minus.forEach((item) =>
           /[^0-9]/g,
           ""
         );
-      console.log(oldPriceItemValue);
-
-      // ВСЯ цена БЕЗ скидки (В Итого)
-
-      OLD_PRICE = Math.floor(
-        Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
-          Number(oldPriceItemValue) / value
-      );
-
-      withoutSale.textContent = OLD_PRICE.toLocaleString();
 
       const newPriceItem =
         item.parentElement.parentElement.previousElementSibling
@@ -165,32 +162,41 @@ minus.forEach((item) =>
         Number(oldPriceItemValue) - Number(oldPriceItemValue) / value
       );
 
-      // Количество
-      itemsCount.textContent = Number(itemsCount.textContent) - 1;
+      if (checkbox.checked) {
+        // Количество
+        itemsCount.textContent = Number(itemsCount.textContent) - 1;
 
-      // ВСЯ цена со скидкой (В Итого)
+        // ВСЯ цена БЕЗ скидки (В Итого)
 
-      FINAL_PRICE = Math.floor(
-        Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
-          Number(newPriceItemValue) / value
-      );
+        OLD_PRICE = Math.floor(
+          Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
+            Number(oldPriceItemValue) / value
+        );
 
-      finalPrice.textContent = FINAL_PRICE.toLocaleString();
+        withoutSale.textContent = OLD_PRICE.toLocaleString();
 
-      item.nextElementSibling.textContent = value - 1;
+        // ВСЯ цена со скидкой (В Итого)
 
-      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+        FINAL_PRICE = Math.floor(
+          Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
+            Number(newPriceItemValue) / value
+        );
+
+        finalPrice.textContent = FINAL_PRICE.toLocaleString();
+
+        sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+
+        // Если чекбокс "Оплатить сразу" прожат
+        updateInstantPayButton();
+
+        // Если аккордеон свёрнут
+        updateTitlePrice();
+        updateAccordeonTitleCount();
+      }
 
       // Убавили счётчик = продуктов на складе стало на 1 больше
       if (!!productLeft?.textContent)
         productLeft.textContent = Number(productLeft.textContent) + 1;
-
-      // Если чекбокс "Оплатить сразу" прожат
-      updateInstantPayButton();
-
-      // Если аккордеон свёрнут
-      updateTitlePrice()
     }
   })
 );
-

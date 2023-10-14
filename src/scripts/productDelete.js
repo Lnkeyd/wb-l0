@@ -1,10 +1,9 @@
-import { updateInstantPayButton, updateTitlePrice } from "./counters.js";
+import { updateTitlePrice } from "./counters.js";
 
 // Удаление продукта
 const finalPrice = document.querySelector(".checkout-with-sale__value-sum");
 const withoutSale = document.querySelector(".checkout-without-sale__value-sum");
 const sale = document.querySelector(".checkout-sale__value-sum");
-
 
 function updateCartCount() {
   const cartCounts = document.querySelectorAll(".cart-count");
@@ -22,17 +21,33 @@ function updateMissingCount() {
   missingItems.textContent = document.querySelectorAll(".cart-product").length;
 }
 
-function updateCheckoutCount() {
+export function updateCheckoutCount() {
   const checkout = document.querySelector(
     ".checkout-without-sale__title-count"
   );
-  checkout.textContent = document.querySelectorAll(".cart-product").length;
+
+  let active = 0;
+
+  const checkboxes = document.querySelectorAll(".product-check-input");
+  checkboxes.forEach((check) => {
+    const productCount = document.querySelector(
+      `#${check.dataset.productCount}`
+    );
+    if (check.checked) active += Number(productCount.textContent);
+  });
+
+  checkout.textContent = active;
 }
 
-function updateAccordeonTitleCount() {
+export function updateAccordeonTitleCount() {
   const accordeonTitle = document.querySelector(".cart-container-title__count");
-  accordeonTitle.textContent =
-    document.querySelectorAll(".cart-product").length;
+  // Если нужно считать все товары в корзине, даже нечекнутые
+  // accordeonTitle.textContent =
+  //   document.querySelectorAll(".cart-product").length;
+  const itemsCount = document.querySelector(
+    ".checkout-without-sale__title-count"
+  );
+  accordeonTitle.textContent = itemsCount.textContent;
 }
 
 function updateAllCount() {
@@ -63,35 +78,41 @@ deleteProductButtons.forEach((item) =>
       `#${item.dataset.oldPriceValue}`
     );
 
-    console.log(finalPrice, productPrice);
+    const checkbox = document.querySelector(`#${item.dataset.checkId}`);
 
-    // ИТОГО со скидкой
-    FINAL_PRICE =
-      Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
-      Number(productPrice.textContent.replace(/[^0-9]/g, ""));
+    if (checkbox.checked) {
+      // ИТОГО со скидкой
+      FINAL_PRICE =
+        Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
+        Number(productPrice.textContent.replace(/[^0-9]/g, ""));
 
-    finalPrice.textContent = FINAL_PRICE.toLocaleString();
+      finalPrice.textContent = FINAL_PRICE.toLocaleString();
 
-    // ИТОГО БЕЗ скидки
-    OLD_PRICE =
-      Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
-      Number(productOldPrice.textContent.replace(/[^0-9]/g, ""));
+      // ИТОГО БЕЗ скидки
+      OLD_PRICE =
+        Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
+        Number(productOldPrice.textContent.replace(/[^0-9]/g, ""));
 
-    withoutSale.textContent = OLD_PRICE.toLocaleString();
+      withoutSale.textContent = OLD_PRICE.toLocaleString();
 
-    sale.textContent = (
-      (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
-        Number(finalPrice.textContent.replace(/[^0-9]/g, ""))) *
-      -1
-    ).toLocaleString();
+      sale.textContent = (
+        (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
+          Number(finalPrice.textContent.replace(/[^0-9]/g, ""))) *
+        -1
+      ).toLocaleString();
 
+    }
+    
     // Удаляем картинку из карточек товаров
+    // Эту логику переместить в чекбокс когда его анчекаешь
     productCards.forEach((card) => card.remove());
-
+    
     targetProduct.remove();
     missingProduct.remove();
-    updateAllCount();
-    updateInstantPayButton()
+    updateCheckoutCount();
+    updateCartCount();
+    updateMissingCount();
+    updateAccordeonTitleCount();
     updateTitlePrice()
   })
 );

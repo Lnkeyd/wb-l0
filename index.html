@@ -14,6 +14,7 @@
     <script type="module" src="./src/scripts/popups.js" defer></script>
     <script type="module" src="./src/scripts/accordeons.js" defer></script>
     <script type="module" src="./src/scripts/instantPay.js" defer></script>
+    <script type="module" src="./src/scripts/checkboxes.js" defer></script>
   </head>
   <body class="">
     <!-- Mobile Header Start -->
@@ -128,7 +129,7 @@
               >&nbsp;сом
             </div>
             <label class="check-label">
-              <input class="check__input" type="checkbox" />
+              <input class="check__input check-all" type="checkbox" checked/>
               <span class="check-style"></span>
               Выбрать все
             </label>
@@ -148,6 +149,9 @@
                   <input
                     class="check__input product-check-input"
                     id="product-check-input-1"
+                    data-product-card="product-card-1"
+                    data-product-count="product-count-1"
+                    data-product-item-count="product-item-count-1"
                     data-price-value="product__price-value-1"
                     data-old-price-value="product__price_old-value-1"
                     type="checkbox"
@@ -205,7 +209,12 @@
                   >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
-                  <div class="product-buttons-wrap-counter__count">1</div>
+                  <div
+                    class="product-buttons-wrap-counter__count"
+                    id="product-count-1"
+                  >
+                    1
+                  </div>
                   <div
                     class="product-buttons-wrap-counter__plus"
                     data-check-id="product-check-input-1"
@@ -289,6 +298,9 @@
                   <input
                     class="check__input product-check-input"
                     id="product-check-input-2"
+                    data-product-card="product-card-2"
+                    data-product-count="product-count-2"
+                    data-product-item-count="product-item-count-2"
                     data-price-value="product__price-value-2"
                     data-old-price-value="product__price_old-value-2"
                     type="checkbox"
@@ -340,7 +352,12 @@
                   >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
-                  <div class="product-buttons-wrap-counter__count">200</div>
+                  <div
+                    class="product-buttons-wrap-counter__count"
+                    id="product-count-2"
+                  >
+                    200
+                  </div>
                   <div
                     class="product-buttons-wrap-counter__plus"
                     data-check-id="product-check-input-2"
@@ -423,6 +440,9 @@
                   <input
                     class="check__input product-check-input"
                     id="product-check-input-3"
+                    data-product-card="product-card-3"
+                    data-product-count="product-count-3"
+                    data-product-item-count="product-item-count-3"
                     data-price-value="product__price-value-3"
                     data-old-price-value="product__price_old-value-3"
                     type="checkbox"
@@ -472,7 +492,12 @@
                   >
                     <img src="/public/images/icons/minus.svg" alt="decrease" />
                   </div>
-                  <div class="product-buttons-wrap-counter__count">2</div>
+                  <div
+                    class="product-buttons-wrap-counter__count"
+                    id="product-count-3"
+                  >
+                    2
+                  </div>
                   <div
                     class="product-buttons-wrap-counter__plus"
                     data-check-id="product-check-input-3"
@@ -845,7 +870,11 @@
                     src="/public/images/t-shirt.png"
                     alt="delivery product item"
                   />
-                  <div class="delivery-products-item__count">2</div>
+                  <div
+                    class="delivery-products-item__count product-item-count-1"
+                  >
+                    2
+                  </div>
                 </div>
                 <div class="delivery-products-item product-card-2">
                   <img
@@ -853,7 +882,11 @@
                     src="/public/images/phone-case.png"
                     alt="delivery product item"
                   />
-                  <div class="delivery-products-item__count">184</div>
+                  <div
+                    class="delivery-products-item__count product-item-count-2"
+                  >
+                    184
+                  </div>
                 </div>
                 <div class="delivery-products-item product-card-3">
                   <img
@@ -861,7 +894,11 @@
                     src="/public/images/pencils.png"
                     alt="delivery product item"
                   />
-                  <div class="delivery-products-item__count">2</div>
+                  <div
+                    class="delivery-products-item__count product-item-count-3"
+                  >
+                    2
+                  </div>
                 </div>
               </div>
             </div>
@@ -881,7 +918,11 @@
                     src="/public/images/phone-case.png"
                     alt="delivery product item"
                   />
-                  <div class="delivery-products-item__count">16</div>
+                  <div
+                    class="delivery-products-item__count product-item-count-2"
+                  >
+                    16
+                  </div>
                 </div>
               </div>
             </div>
