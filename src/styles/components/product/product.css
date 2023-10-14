@@ -306,7 +306,12 @@
     margin-bottom: 21px;
   }
 
-  .product:last-child {
+  /* TODO: fix */
+  /* .cart-product:last-child {
+    margin-top: 33px;
+  } */
+
+  #cart-product-3 {
     margin-top: 33px;
   }
 

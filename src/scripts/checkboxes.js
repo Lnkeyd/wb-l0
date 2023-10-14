@@ -63,7 +63,6 @@ productCheckboxes.forEach((checkbox) => {
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      console.log(FINAL_PRICE);
       OLD_PRICE += Math.floor(
         Number(productWithoutSale.textContent.replace(/[^0-9]/g, ""))
       );
@@ -121,7 +120,6 @@ checkAll.addEventListener("change", () => {
       }
     });
   } else {
-    console.log("UNCHECK");
     checkboxes.forEach((check) => {
       if (check.checked) {
         check.checked = false;

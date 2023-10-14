@@ -72,6 +72,7 @@
   .delivery-point-wrapper {
     display: flex;
     align-items: first baseline;
+    justify-content: space-between;
   }
 
   .delivery-point-info {
@@ -84,6 +85,7 @@
   }
 
   .delivery-point__address {
-    margin-left: 78px;
+    max-width: 405px;
+    flex-grow: 1;
   }
 }

@@ -1,5 +1,10 @@
 const deliveryPoint = document.querySelector(".delivery-point__address");
+const deliveryAsidePoint = document.querySelector(".checkup-point-address");
+
 const deliveryChangeButton = document.querySelector(".delivery-change-button");
+const deliveryAsideChangeButton = document.querySelector(
+  ".checkout-point-header__icon"
+);
 
 let scrollY = 0;
 const deliveryModalClose = document.querySelector(
@@ -13,17 +18,22 @@ const paymentModalClose = document.querySelector(
 );
 
 const paymentChangeButton = document.querySelector(".payment-header__change");
+const paymentAsideChangeButton = document.querySelector(
+  ".checkout-card-header__icon"
+);
 
 // Delivery event listeners
-deliveryChangeButton.addEventListener("click", (e) => {
-  scrollY = window.scrollY;
+[deliveryChangeButton, deliveryAsideChangeButton].forEach((button) => {
+  button.addEventListener("click", (e) => {
+    scrollY = window.scrollY;
 
-  document.querySelector("body").classList.add("modal_active");
-  document.body.style.position = "fixed";
+    document.querySelector("body").classList.add("modal_active");
+    document.body.style.position = "fixed";
 
-  document
-    .querySelector(".modal-delivery")
-    .classList.add("modal-delivery_active");
+    document
+      .querySelector(".modal-delivery")
+      .classList.add("modal-delivery_active");
+  });
 });
 
 deliveryModalClose.addEventListener("click", (e) => {
@@ -47,15 +57,17 @@ deliverySubmit.addEventListener("click", (e) => {
 });
 
 // Payment event listeners
-paymentChangeButton.addEventListener("click", (e) => {
-  scrollY = window.scrollY;
+[paymentChangeButton, paymentAsideChangeButton].forEach((button) => {
+  button.addEventListener("click", (e) => {
+    scrollY = window.scrollY;
 
-  document.querySelector("body").classList.add("modal_active");
-  document.body.style.position = "fixed";
+    document.querySelector("body").classList.add("modal_active");
+    document.body.style.position = "fixed";
 
-  document
-    .querySelector(".modal-payment")
-    .classList.add("modal-payment_active");
+    document
+      .querySelector(".modal-payment")
+      .classList.add("modal-payment_active");
+  });
 });
 
 paymentModalClose.addEventListener("click", (e) => {
@@ -87,8 +99,7 @@ const deliveryRadios = document.querySelectorAll(".modal-delivery__radio");
 for (item of deliveryRadios) {
   item.addEventListener("change", function () {
     deliveryPoint.textContent = this.value;
-    document.querySelector(".delivery-point__title").textContent =
-      "Пункт выдачи";
+    deliveryAsidePoint.textContent = this.value;
   });
 }
 
@@ -102,8 +113,11 @@ const paymentRadios = document.querySelectorAll(".modal-payment__radio");
 for (item of paymentRadios) {
   item.addEventListener("change", function () {
     cardNumber.textContent = this.value;
-    console.log(this.nextElementSibling.nextElementSibling.firstElementChild);
-    document.querySelector(".payment-card-image").src =
+    const asideCardImage = document.querySelector(
+      ".checkout-card-content__icon"
+    ).firstElementChild;
+    const paymentCardImage = document.querySelector(".payment-card-image");
+    asideCardImage.src = paymentCardImage.src =
       this.nextElementSibling.nextElementSibling.firstElementChild.src;
   });
 }
@@ -116,6 +130,7 @@ document.querySelectorAll(".modal-item-delete").forEach((item) => {
 });
 
 // Point and Courier radio buttons
+//
 
 const pointButton = document.querySelector(".modal-delivery__point");
 const courierButton = document.querySelector(".modal-delivery__courier");
@@ -129,6 +144,9 @@ courierButton.addEventListener("click", () => {
   document
     .querySelector(".modal-delivery-point-items")
     .classList.remove("modal-delivery-point-items_active");
+
+  document.querySelector(".delivery-point__title").textContent = "Курьером";
+  document.querySelector('.checkout-point-header__title').textContent = "Доставка курьером"
 });
 
 pointButton.addEventListener("click", () => {
@@ -140,4 +158,6 @@ pointButton.addEventListener("click", () => {
   document
     .querySelector(".modal-delivery-courier-items")
     .classList.remove("modal-delivery-courier-items_active");
+
+  document.querySelector(".delivery-point__title").textContent = "Пункт выдачи";
 });

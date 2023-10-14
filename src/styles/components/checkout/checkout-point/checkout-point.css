@@ -2,6 +2,10 @@
   display: none;
 }
 
+.check-icon {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1024px) {
   .checkout-point {
     display: block;

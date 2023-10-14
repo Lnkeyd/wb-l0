@@ -20,7 +20,6 @@ cartButton.addEventListener("click", () => {
 
 missingButton.addEventListener("click", () => {
   missingProducts.forEach((product) => {
-    console.log(product);
     product.classList.toggle("product_hidden");
     deliverySection.style.marginTop =
       deliverySection.style.marginTop === "42px" ? "" : "42px";
