@@ -15,7 +15,11 @@
     <script type="module" src="./src/scripts/accordeons.js" defer></script>
     <script type="module" src="./src/scripts/instantPay.js" defer></script>
     <script type="module" src="./src/scripts/checkboxes.js" defer></script>
-    <script type="module" src="./src/scripts/validation.js" defer></script>
+    <script type="module" src="./src/scripts/validation/phoneValidation.js" defer></script>
+    <script type="module" src="./src/scripts/validation/emailValidation.js" defer></script>
+    <script type="module" src="./src/scripts/validation/taxIdValidation.js" defer></script>
+    <script type="module" src="./src/scripts/validation/nameValidation.js" defer></script>
+    <script type="module" src="./src/scripts/validation/surnameValidation.js" defer></script>
   </head>
   <body class="">
     <!-- Mobile Header Start -->
@@ -245,7 +249,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete product-cart__delete"
+                    id="product-cart-delete-1"
                     data-check-id="product-check-input-1"
                     data-missing-id="cart-missing-product-1"
                     data-parent-id="cart-product-1"
@@ -387,7 +392,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete product-cart__delete"
+                    id="product-cart-delete-2"
                     data-check-id="product-check-input-2"
                     data-missing-id="cart-missing-product-2"
                     data-parent-id="cart-product-2"
@@ -528,7 +534,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete product-cart__delete"
+                    id="product-cart-delete-3"
                     data-check-id="product-check-input-3"
                     data-missing-id="cart-missing-product-3"
                     data-parent-id="cart-product-3"
@@ -627,7 +634,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete missing-cart__delete"
+                    data-product-cart-delete-id="product-cart-delete-1"
                     data-missing-id="cart-missing-product-1"
                     data-parent-id="cart-product-1"
                     data-price-value="product__price-value-1"
@@ -708,7 +716,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete missing-cart__delete"
+                    data-product-cart-delete-id="product-cart-delete-2"
                     data-missing-id="cart-missing-product-2"
                     data-parent-id="cart-product-2"
                     data-price-value="product__price-value-2"
@@ -789,7 +798,8 @@
                     </svg>
                   </div>
                   <div
-                    class="product-buttons-wrap-icons__delete"
+                    class="product-buttons-wrap-icons__delete missing-cart__delete"
+                    data-product-cart-delete-id="product-cart-delete-3"
                     data-missing-id="cart-missing-product-3"
                     data-parent-id="cart-product-3"
                     data-price-value="product__price-value-3"
@@ -970,7 +980,9 @@
                 type="text"
                 placeholder="Имя"
               />
+              <div class="customer-form__container_label">Имя</div>
               <div class="customer-form__line"></div>
+              <div class="customer-form__error" id="name-error"></div>
             </div>
             <div class="customer-form__surname customer-form__container">
               <input
@@ -978,7 +990,9 @@
                 type="text"
                 placeholder="Фамилия"
               />
+              <div class="customer-form__container_label">Фамилия</div>
               <div class="customer-form__line"></div>
+              <div class="customer-form__error" id="surname-error"></div>
             </div>
             <div class="customer-form__email customer-form__container">
               <input
@@ -986,7 +1000,9 @@
                 type="email "
                 placeholder="Электронная почта"
               />
+              <div class="customer-form__container_label">Почта</div>
               <div class="customer-form__line"></div>
+              <div class="customer-form__error" id="email-error"></div>
             </div>
             <div class="customer-form__phone customer-form__container">
               <input
@@ -994,15 +1010,21 @@
                 type="text"
                 placeholder="Телефон"
               />
+              <div class="customer-form__container_label">Телефон</div>
               <div class="customer-form__line"></div>
+              <div class="customer-form__error" id="phone-error"></div>
             </div>
             <div class="customer-form__tax-id customer-form__container">
               <input
                 class="customer-form__input"
+                id="customer-tax-id__input"
                 type="text"
                 placeholder="ИНН"
               />
+              <div class="customer-form__container_label">ИНН</div>
               <div class="customer-form__line"></div>
+              <div class="customer-form__error" id="tax-error"></div>
+              <div id="customer-form__tax-info">Для таможенного оформления</div>
             </div>
             <!-- after: text -->
           </form>

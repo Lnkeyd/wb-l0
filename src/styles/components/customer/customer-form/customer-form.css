@@ -40,8 +40,12 @@
   outline: none;
 }
 
-.customer-form__container:has(.customer-form__input_active)::before {
-  content: "Телефон";
+.customer-form__container_label {
+  display: none;
+}
+
+.customer-form__input:focus ~ .customer-form__container_label {
+  display: block;
   position: absolute;
 
   top: -3px;
@@ -56,21 +60,29 @@
 }
 
 /* ERROR */
-.customer-form__container:has(.customer-form__input_error)::after {
-  content: "Используйте латинские буквы";
+.customer-form_error > input {
+  color: var(--orange);
+}
+.customer-form_error > .customer-form__error {
   position: absolute;
-
   top: 45px;
-  left: 0;
+  color: var(--orange);
 
   font-family: Segoe UI;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 116.667% */
-
-  color: var(--light-red);
 }
+
+/* #customer-tax-id__input:focus ~ #customer-form__tax-info {
+  display: none;
+} */
+
+.customer-form_error > .customer-form__line {
+  background-color: var(--orange);
+}
+
 /* ERROR END */
 
 .customer-form__line {
@@ -79,8 +91,7 @@
   background-color: var(--line-input);
 }
 
-.customer-form__tax-id::after {
-  content: "Для таможенного оформления";
+#customer-form__tax-info {
   position: absolute;
   top: 45px;
 
@@ -104,21 +115,27 @@
     margin-bottom: 8px;
   }
 
-  .customer-form__name, .customer-form__surname {
+  .customer-form__name,
+  .customer-form__surname {
     width: 282px;
   }
 
-  .customer-form__email, .customer-form__phone, .customer-form__tax-id {
+  .customer-form__email,
+  .customer-form__phone,
+  .customer-form__tax-id {
     width: 180px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .customer-form__name, .customer-form__surname {
+  .customer-form__name,
+  .customer-form__surname {
     width: 338px;
   }
 
-  .customer-form__email, .customer-form__phone, .customer-form__tax-id {
+  .customer-form__email,
+  .customer-form__phone,
+  .customer-form__tax-id {
     width: 217px;
   }
 }

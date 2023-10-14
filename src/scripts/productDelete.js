@@ -61,9 +61,9 @@ function updateAllCount() {
   updateAccordeonTitleCount();
 }
 
-const deleteProductButtons = document.querySelectorAll(
-  ".product-buttons-wrap-icons__delete"
-);
+const deleteProductButtons = document.querySelectorAll(".product-cart__delete");
+
+const deleteMissingButtons = document.querySelectorAll(".missing-cart__delete");
 
 deleteProductButtons.forEach((item) =>
   item.addEventListener("click", () => {
@@ -100,19 +100,29 @@ deleteProductButtons.forEach((item) =>
           Number(finalPrice.textContent.replace(/[^0-9]/g, ""))) *
         -1
       ).toLocaleString();
-
     }
-    
+
     // Удаляем картинку из карточек товаров
     // Эту логику переместить в чекбокс когда его анчекаешь
     productCards.forEach((card) => card.remove());
-    
+
     targetProduct.remove();
     missingProduct.remove();
     updateCheckoutCount();
     updateCartCount();
     updateMissingCount();
     updateAccordeonTitleCount();
-    updateTitlePrice()
+    updateTitlePrice();
   })
 );
+
+deleteMissingButtons.forEach((button) => {
+  const productButton = document.querySelector(
+    `#${button.dataset.productCartDeleteId}`
+  );
+
+  button.addEventListener("click", () => {
+    const event = new Event("click");
+    productButton.dispatchEvent(event);
+  });
+});
