@@ -53,7 +53,7 @@ inputTax.addEventListener("focusout", function (event) {
       inputTax.parentElement.classList.add("customer-form_error");
       taxTextError.textContent = TAX_ERROR_TEXT;
     }
-    FORM_DATA.phone = !inputTaxError ? valid : "";
+    FORM_DATA.taxId.value = !inputTaxError ? event.target.value : "";
     console.log(inputTaxError + "FOCUS_OUT");
   }
 });

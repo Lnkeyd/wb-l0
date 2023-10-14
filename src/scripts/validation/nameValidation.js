@@ -6,14 +6,15 @@ const nameTextError = document.querySelector("#name-error");
 
 // Input listeners start
 inputName.addEventListener("keyup", function (event) {
-    if (event.target.value.length < 1) {
+    if (event.target.value.length > 0) {
         nameTextError.textContent = "";
+        inputName.parentElement.classList.remove("customer-form_error");
     }
 });
 
 inputName.addEventListener("focusout", function (event) {
   if (event.target.value.length) {
 
-    FORM_DATA.name = event.target.value
+    FORM_DATA.name.value = event.target.value
   }
 });

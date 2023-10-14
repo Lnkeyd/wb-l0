@@ -65,7 +65,7 @@ inputPhone.addEventListener("focusout", function (event) {
       inputPhone.parentElement.classList.add("customer-form_error");
       phoneTextError.textContent = "Формат: +9 999 999 99 99";
     }
-    FORM_DATA.phone = !inputPhoneError ? valid : "";
+    FORM_DATA.phone.value = !inputPhoneError ? event.target.value.replace(/[^0-9]/g, "") : "";
     console.log(inputPhoneError + "FOCUS_OUT");
   }
 });

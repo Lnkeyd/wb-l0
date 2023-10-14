@@ -48,7 +48,7 @@ inputEmail.addEventListener("focusout", function (event) {
       inputEmail.parentElement.classList.add("customer-form_error");
       emailTextError.textContent = EMAIL_ERROR_TEXT;
     }
-    FORM_DATA.phone = !inputEmailError ? valid : "";
+    FORM_DATA.email.value = !inputEmailError ? event.target.value : "";
     console.log(inputEmailError + "FOCUS_OUT");
   }
 });
