@@ -26,7 +26,7 @@ button.addEventListener("click", () => {
   if (flag === true) {
     alert("Данные успешно отправлены!");
   }
-  if (detectDeviceType() === 'Mobile') {
+  if (detectDeviceType() === 'Mobile' && flag === false) {
     customerForm.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
   }
 });
