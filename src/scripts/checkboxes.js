@@ -44,7 +44,6 @@ productCheckboxes.forEach((checkbox) => {
       productItemCount.forEach((item, index) => {
         if (index + 1 === productItemCount.length) {
           if (Number(productCount.textContent) > 184) {
-            console.log("BIGGERRRRR");
 
             const result = Number(productCount.textContent) - 184;
 
