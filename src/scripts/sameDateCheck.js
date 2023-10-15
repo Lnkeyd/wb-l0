@@ -1,3 +1,5 @@
+import { updateCheckupPointDates } from "./updateCheckupPointDates.js";
+
 export function sameDateCheck(checkbox) {
   const productItemCount = document.querySelectorAll(
     `.${checkbox.dataset.productItemCount}`
@@ -41,23 +43,26 @@ export function sameDateCheck(checkbox) {
                 <div class="delivery-products-range__end-date">8</div>
                 <div class="delivery-products-range__month">&nbsp;февраля</div>
             </div>
-            <div class="delivery-products-item product-card-2">
-                  <img
-                    class="delivery-products-item__image"
-                    src="${lastSameDateProduct.previousElementSibling.src}"
-                    alt="delivery product item"
-                  />
-                  <div
-                    class="delivery-products-item__count product-item-count-2"
-                  >
-                    ${productCountNumber - 184}
-                  </div>
+            <div
+                class="delivery-products-items"
+                id="delivery-products-items-1"
+              >
+              <div class="delivery-products-item product-card-2">
+                <img
+                class="delivery-products-item__image"
+                src="${lastSameDateProduct.previousElementSibling.src}"
+                alt="delivery product item"
+                />
+                <div
+                class="delivery-products-item__count product-item-count-2"
+                >
+                ${productCountNumber - 184}
+                </div>
+              </div>
             </div>
-          `;
+              `;
 
         oldDate.after(newDate);
-        console.log(newDate.lastElementChild)
-        console.log(newDateProductItem)
       }
     }
   } else if (productCountNumber === 184) {
@@ -80,4 +85,6 @@ export function sameDateCheck(checkbox) {
   } else if (productCountNumber < 184) {
     productItemCount[0].textContent = productCount.textContent;
   }
+
+  updateCheckupPointDates()
 }

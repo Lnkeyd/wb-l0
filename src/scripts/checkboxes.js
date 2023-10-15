@@ -4,6 +4,7 @@ import {
   updateCheckoutCount,
 } from "./productDelete.js";
 import { sameDateCheck } from "./sameDateCheck.js";
+import { updateCheckupPointDates } from "./updateCheckupPointDates.js";
 
 const productCheckboxes = document.querySelectorAll(".product-check-input");
 const finalPrice = document.querySelector(".checkout-with-sale__value-sum");
@@ -35,7 +36,6 @@ productCheckboxes.forEach((checkbox) => {
     `.${checkbox.dataset.productItemCount}`
   );
 
-
   checkbox.addEventListener("change", () => {
     const productCards = document.querySelectorAll(
       `.${checkbox.dataset.productCard}`
@@ -44,8 +44,16 @@ productCheckboxes.forEach((checkbox) => {
     if (checkbox.checked) {
       productCards.forEach((card) => (card.style = "display: block;"));
 
+      const productItems = document.querySelectorAll(
+        ".delivery-products-items"
+      );
+
+      productItems[productItems.length - 1].parentElement.style.display =
+        "flex";
+      updateCheckupPointDates();
+
       // Обновляем товары в способе доставки
-      sameDateCheck(checkbox)
+      sameDateCheck(checkbox);
 
       FINAL_PRICE += Math.floor(
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))
@@ -72,6 +80,15 @@ productCheckboxes.forEach((checkbox) => {
       checkAll.checked = false;
 
       productCards.forEach((card) => (card.style = "display: none;"));
+      const productItems = document.querySelectorAll(
+        ".delivery-products-items"
+      );
+
+      if (!productItems[productItems.length - 1].length) {
+        productItems[productItems.length - 1].parentElement.style.display =
+          "none";
+        updateCheckupPointDates();
+      }
 
       FINAL_PRICE -= Math.floor(
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))
