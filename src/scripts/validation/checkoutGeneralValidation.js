@@ -1,3 +1,5 @@
+import { detectDeviceType } from "../utils/detectDeviceType.js";
+
 const button = document.querySelector(".instant-pay__button");
 
 button.addEventListener("click", () => {
@@ -22,5 +24,8 @@ button.addEventListener("click", () => {
   }
   if (flag === true) {
     alert("Данные успешно отправлены!");
+  }
+  if (detectDeviceType() === 'Mobile') {
+    button.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   }
 });

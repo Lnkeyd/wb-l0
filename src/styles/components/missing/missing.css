@@ -30,6 +30,10 @@
   border-radius: 8px;
 }
 
+.missing-item-image-container > label {
+  display: none;
+}
+
 .product-wrapper.missing-item-wrapper {
   display: grid;
   grid-template-columns: 81px 1fr;
@@ -64,10 +68,6 @@
 
   .accordeon {
     margin-right: 0px;
-  }
-
-  .missing-item-image-container > label {
-    display: none;
   }
 
   .missing-item-image-container > img {

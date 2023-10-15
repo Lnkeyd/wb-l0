@@ -1,4 +1,5 @@
 import { updateAccordeonTitleCount } from "./productDelete.js";
+import { sameDateCheck } from "./sameDateCheck.js";
 
 const minus = document.querySelectorAll(".product-buttons-wrap-counter__minus");
 const count = document.querySelectorAll(".product-buttons-wrap-counter__count");
@@ -109,6 +110,15 @@ plus.forEach((item) =>
       // Если аккордеон свёрнут
       updateTitlePrice();
       updateAccordeonTitleCount();
+
+      // Обновляем товары в способе доставки
+      const productItemCount = document.querySelectorAll(
+        `.${checkbox.dataset.productItemCount}`
+      );
+      const productCount = document.querySelector(
+        `#${checkbox.dataset.productCount}`
+      );
+      sameDateCheck(checkbox);
     }
 
     // Прибавили счётчик = продуктов на складе стало на 1 меньше
@@ -192,6 +202,15 @@ minus.forEach((item) =>
         // Если аккордеон свёрнут
         updateTitlePrice();
         updateAccordeonTitleCount();
+
+        // Обновляем товары в способе доставки
+        const productItemCount = document.querySelectorAll(
+          `.${checkbox.dataset.productItemCount}`
+        );
+        const productCount = document.querySelector(
+          `#${checkbox.dataset.productCount}`
+        );
+        sameDateCheck(checkbox);
       }
 
       // Убавили счётчик = продуктов на складе стало на 1 больше

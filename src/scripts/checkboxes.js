@@ -3,6 +3,7 @@ import {
   updateAccordeonTitleCount,
   updateCheckoutCount,
 } from "./productDelete.js";
+import { sameDateCheck } from "./sameDateCheck.js";
 
 const productCheckboxes = document.querySelectorAll(".product-check-input");
 const finalPrice = document.querySelector(".checkout-with-sale__value-sum");
@@ -29,9 +30,11 @@ productCheckboxes.forEach((checkbox) => {
     `#${checkbox.dataset.productCount}`
   );
 
+  // Переменную вынести в отд. ф-цию
   const productItemCount = document.querySelectorAll(
     `.${checkbox.dataset.productItemCount}`
   );
+
 
   checkbox.addEventListener("change", () => {
     const productCards = document.querySelectorAll(
@@ -41,22 +44,8 @@ productCheckboxes.forEach((checkbox) => {
     if (checkbox.checked) {
       productCards.forEach((card) => (card.style = "display: block;"));
 
-      productItemCount.forEach((item, index) => {
-        if (index + 1 === productItemCount.length) {
-          if (Number(productCount.textContent) > 184) {
-
-            const result = Number(productCount.textContent) - 184;
-
-            item.textContent = result;
-
-            // Убираем видимость продукта, если в той же дате
-          } else if (Number(productCount.textContent) === 184) {
-            item.parentElement.style = "display: none;";
-
-            productItemCount[index - 1].textContent = productCount.textContent;
-          }
-        }
-      });
+      // Обновляем товары в способе доставки
+      sameDateCheck(checkbox)
 
       FINAL_PRICE += Math.floor(
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))

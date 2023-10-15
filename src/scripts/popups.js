@@ -54,7 +54,6 @@ deliveryFreeInfo.addEventListener("mouseleave", () => {
 deliveryCheckoutInfo.lastElementChild.lastElementChild.addEventListener(
   "mouseenter",
   () => {
-    console.log("ENTERED");
     let popup = document.createElement("div");
     popup.className = "delivery-popup";
     popup.textContent =

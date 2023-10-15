@@ -84,7 +84,7 @@ div {
     grid-auto-rows: min-content;
     padding-left: 9px;
   }
-  .grid.right {
+  .grid-right {
     grid-column: span 1 / -1;
     grid-auto-rows: min-content;
   }
