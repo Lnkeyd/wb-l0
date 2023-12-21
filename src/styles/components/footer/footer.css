@@ -9,12 +9,11 @@ footer {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 
   
 }

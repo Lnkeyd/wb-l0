@@ -1,5 +1,5 @@
 :root {
-  /* colors */
+
   --violet: #6725a8;
   --magenta: #cb11ab;
   --white: #ffffff;
@@ -14,13 +14,13 @@
   --orange: #f55123;
   --green: #0cb477;
   --line-input: rgba(0, 0, 0, 0.2);
-  /* paddings */
+  
   --padding-mobile: 16px;
   --padding-desktop: 24px
-  /* sizes */
+  
   --mobile-tapbar-height: 56px;
 
-  /* media sizes */
+
 
   --desktop-sm: 1024px;
 }
@@ -36,6 +36,8 @@ html {
 }
 
 body {
+  max-width: 1400px;
+  margin: 0 auto;
   overflow-y: auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--violet);
@@ -93,13 +95,15 @@ div {
   section:not(.checkout).payment,
   section:not(.checkout).delivery {
     padding-right: 24px;
+    padding-left: 24px;
   }
   
   main > section {
     padding: 0 24px;
   }
   .delivery, .payment, .customer {
-    margin-left: 24px;
+    /* margin-left: 24px; */
+    margin-left: 14px;
     margin-right: 34px;
     padding-top: 16px;
     padding-bottom: 19px;

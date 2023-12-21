@@ -21,7 +21,7 @@
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 85.714% */
+    line-height: 24px;
     font-variant: all-small-caps;
     letter-spacing: 0.56px;
   }
@@ -87,7 +87,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
   }
 
   .desktop-header-search__input:focus {
@@ -100,7 +100,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
   }
 
   .desktop-header-nav__item {
@@ -149,7 +149,7 @@
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
-    line-height: 18px; /* 180% */
+    line-height: 18px;
 
     border-radius: 16px;
     background-color: var(--orange);
@@ -163,11 +163,10 @@
   .desktop-header-nav__label {
     color: var(--white);
 
-    /* Сайт/Caption */
     font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
   }
 }

@@ -15,7 +15,9 @@
 
 @media screen and (min-width: 1024px){
   .delivery {
-    margin-top: 32px;
+    /* margin-top: 32px; */
+    /* TODO: */
+    margin-top: 23px;
     padding-top: 11px;
     padding-bottom: 20px;
   }

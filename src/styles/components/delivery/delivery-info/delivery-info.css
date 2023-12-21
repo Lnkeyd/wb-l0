@@ -9,12 +9,11 @@
 .delivery-info__text {
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 
   margin-left: 8px;
 }
@@ -36,12 +35,11 @@
 
   text-decoration: dashed;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 
   position: relative;
 }
@@ -66,19 +64,18 @@
   border-radius: 8px;
   background: var(--background-white, #fff);
 
-  /* Тени/Итого, Выпадающие списки */
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
     0px 2px 10px 0px rgba(0, 0, 0, 0.15);
   width: 288px;
   padding: 10px 16px 14px 16px;
 
   color: var(--black);
-  /* Сайт/Caption */
+
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
   z-index: 1;
 }
 

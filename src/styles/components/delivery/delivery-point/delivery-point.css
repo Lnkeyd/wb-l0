@@ -1,15 +1,11 @@
-.delivery-point {
-}
-
 .delivery-point__title {
   color: var(--black);
 
-  /* Сайт/Body-semibold */
   font-family: Segoe UI;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 
   margin-top: 8px;
 }
@@ -17,12 +13,11 @@
 .delivery-point__address {
   color: var(--black);
 
-  /* Сайт/Body */
   font-family: Segoe UI;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .delivery-point-info {
@@ -41,12 +36,11 @@
 .delivery-point-info__rating {
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 
   margin-left: 4px;
 }
@@ -54,12 +48,11 @@
 .delivery-point-info-scedule {
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 
   margin-left: 8px;
 }
@@ -70,9 +63,9 @@
   }
 
   .delivery-point-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 186px 1fr;
     align-items: first baseline;
-    justify-content: space-between;
   }
 
   .delivery-point-info {

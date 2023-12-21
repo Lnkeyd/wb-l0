@@ -65,12 +65,11 @@
 
   color: var(--black);
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .product__price {
@@ -83,14 +82,12 @@
   color: var(--black);
 
   margin-top: 1px;
-  /* Сайт/H4 */
+
   font-family: Segoe UI;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
-
-  /* background-color: blue; */
+  line-height: 24px; 
 }
 
 .product__price_old {
@@ -101,12 +98,11 @@
 
   text-decoration: dashed;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product__price_old::before {
@@ -160,23 +156,21 @@
 .product__price__sale-title {
   color: var(--gray);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product__price__sale-value {
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product-description {
@@ -186,7 +180,6 @@
   grid-row-end: 3;
 
   padding-left: 15px;
-  /* background-color: green; */
 }
 
 .product-description__title {
@@ -194,12 +187,11 @@
 
   margin-top: 2px;
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -211,24 +203,23 @@
   color: var(--black);
   margin-top: 7px;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product-description__stock {
   color: var(--gray);
 
   margin-top: 7px;
-  /* Сайт/Caption */
+
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product-description-company {
@@ -247,8 +238,6 @@
   align-items: center;
 
   margin-top: 12px;
-
-  /* background-color: peru; */
 }
 
 .product-buttons-wrap-counter {
@@ -280,12 +269,11 @@
 
   color: var(--black);
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .product-buttons-wrap-items-left {
@@ -293,12 +281,11 @@
 
   margin-left: 16px;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .product-buttons-wrap-icons {
@@ -331,8 +318,7 @@
 @media screen and (min-width: 1024px) {
   .product-wrapper {
     display: grid;
-    /* !TODO: */
-    /* grid-template-columns: 106px auto auto auto; */
+
     grid-template-columns: 106px auto 1fr 131px;
     grid-template-rows: auto;
   }
@@ -353,11 +339,6 @@
   .product:not(:last-child) {
     margin-bottom: 21px;
   }
-
-  /* TODO: fix */
-  /* .cart-product:last-child {
-    margin-top: 33px;
-  } */
 
   #cart-product-3 {
     margin-top: 33px;
@@ -395,12 +376,11 @@
 
     color: var(--text-black, #000);
 
-    /* Сайт/Body */
     font-family: Segoe UI;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
 
     display: inline-block;
     -webkit-line-clamp: inherit;
@@ -419,12 +399,11 @@
   .product-description-company__text {
     color: var(--gray);
 
-    /* Сайт/Caption */
     font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
 
     margin-top: 2px;
   }
@@ -467,7 +446,7 @@
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
   }
 
   .product-description-company-popup__reg {
@@ -477,18 +456,17 @@
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
   }
 
   .product-description-company-popup__address {
     color: var(--black);
 
-    /* Сайт/Caption */
     font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
   }
 
   .product-description-company__info > img {
@@ -536,12 +514,11 @@
 
     text-align: right;
 
-    /* Сайт/H3 */
     font-family: Segoe UI;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 28px; /* 140% */
+    line-height: 28px;
     letter-spacing: -0.2px;
 
     margin-top: -5px;
@@ -561,7 +538,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
   }
 
   .product__image {

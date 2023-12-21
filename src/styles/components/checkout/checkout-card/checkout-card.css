@@ -23,11 +23,10 @@
   .checkout-card-content__number {
     color: var(--black, #000);
 
-    /* Сайт/Подпись */
     font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 123.077% */
+    line-height: 16px;
   }
 }

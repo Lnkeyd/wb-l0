@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 8px;
   border-radius: 8px;
-  background-color: var(--dark-smoky);
+  background-color: var(--smoky);
 }
 
 .check-label.checkout-instant-pay-label {
@@ -19,24 +19,22 @@
 
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
   margin-left: -4px;
 }
 
 .checkout-instant-pay__description {
   color: var(--black);
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
   margin-top: 2px;
 }
 

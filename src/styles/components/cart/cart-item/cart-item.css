@@ -9,7 +9,6 @@
 .cart-item-wrapper {
   display: grid;
   grid-template-columns: 81px 1fr;
-  /* grid-template-rows: 25px 85px 1fr; */
   grid-template-rows: 25px 1fr 46px;
 }
 
@@ -59,12 +58,11 @@
 
   color: var(--black);
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .cart-item__price {
@@ -77,14 +75,13 @@
   color: var(--black);
 
   margin-top: 1px;
-  /* Сайт/H4 */
+
   font-family: Segoe UI;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 
-  /* background-color: blue; */
 }
 
 .cart-item__price_old {
@@ -94,12 +91,11 @@
 
   text-decoration: dashed;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .cart-item__price_old::before {
@@ -132,7 +128,6 @@
   grid-row-end: 3;
 
   padding-left: 15px;
-  /* background-color: green; */
 }
 
 .cart-item-description__title {
@@ -140,36 +135,34 @@
 
   margin-top: 2px;
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .cart-item-description__color {
   color: var(--black);
   margin-top: 7px;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .cart-item-description__stock {
   color: var(--gray);
 
   margin-top: 7px;
-  /* Сайт/Caption */
+
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .cart-item-buttons-wrap {
@@ -185,7 +178,6 @@
 
   margin-top: 12px;
 
-  /* background-color: peru; */
 }
 
 .cart-item-buttons-wrap-counter {
@@ -216,12 +208,11 @@
 
   color: var(--black);
 
-  /* Мобильный сайт/Body-2 */
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .cart-item-buttons-wrap-items-left {
@@ -229,12 +220,11 @@
 
   margin-left: 16px;
 
-  /* Сайт/Caption */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .cart-item-buttons-wrap-icons {

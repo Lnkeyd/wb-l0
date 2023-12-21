@@ -12,8 +12,9 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 140% */
-  letter-spacing: -0.5px;
+  line-height: 28px;
+
+  letter-spacing: -0.2px;
 }
 
 .modal-delivery-buttons {
@@ -36,12 +37,11 @@
 
   color: var(--black);
 
-  /* Сайт/Подпись bold */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .modal-delivery__button_active {
@@ -56,12 +56,11 @@
 .modal-delivery-addresses__header {
   color: var(--black, #000);
 
-  /* Сайт/Подпись bold */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .modal-delivery-form-item {
@@ -76,12 +75,11 @@
 .modal-delivery-item-wrap__label {
   color: var(--black);
 
-  /* Сайт/Текст */
   font-family: Segoe UI;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .modal-delivery-rating-wrap {
@@ -91,27 +89,25 @@
 
 .modal-delivery-rating-wrap__rating {
   margin-left: 4px;
-
   color: var(--black);
 
-  /* Сайт/Подпись */
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .modal-delivery-rating-wrap__name {
   color: var(--gray, #a0a0a4);
 
   margin-left: 8px;
-  /* Сайт/Подпись */
+
   font-family: Segoe UI;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .modal-item-delete > svg {
