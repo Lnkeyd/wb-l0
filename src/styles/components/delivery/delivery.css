@@ -2,8 +2,7 @@
 @import url("./delivery-point/delivery-point.css");
 @import url("./delivery-price/delivery-price.css");
 @import url("./delivery-products/delivery-products.css");
-@import url('./delivery-info/delivery-info.css');
-
+@import url("./delivery-info/delivery-info.css");
 
 .delivery {
   background-color: var(--white);
@@ -13,16 +12,20 @@
   margin-top: 27px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .delivery {
     margin-top: 32px;
     padding-top: 11px;
     padding-bottom: 20px;
   }
+
+  .delivery.extra-margin-applied {
+    margin-top: 42px;
+  }
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
   .delivery {
-    margin-top: 23px;
+    margin-top: 31px;
   }
 }

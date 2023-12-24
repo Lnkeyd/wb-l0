@@ -55,18 +55,21 @@ productCheckboxes.forEach((checkbox) => {
       // Обновляем товары в способе доставки
       sameDateCheck(checkbox);
 
-      FINAL_PRICE += Math.floor(
+      finalPriceGlobal += Math.floor(
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      OLD_PRICE += Math.floor(
+      oldPriceGlobal += Math.floor(
         Number(productWithoutSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      finalPrice.textContent = FINAL_PRICE.toLocaleString();
-      withoutSale.textContent = OLD_PRICE.toLocaleString();
+      finalPrice.textContent = finalPriceGlobal.toLocaleString();
+      withoutSale.textContent = oldPriceGlobal.toLocaleString();
 
-      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+      sale.textContent = (
+        (oldPriceGlobal - finalPriceGlobal) *
+        -1
+      ).toLocaleString();
       itemsCount.textContent = (
         Number(itemsCount.textContent.replace(/[^0-9]/g, "")) +
         Number(productCount.textContent.replace(/[^0-9]/g, ""))
@@ -90,17 +93,20 @@ productCheckboxes.forEach((checkbox) => {
         updateCheckupPointDates();
       }
 
-      FINAL_PRICE -= Math.floor(
+      finalPriceGlobal -= Math.floor(
         Number(productWithSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      OLD_PRICE -= Math.floor(
+      oldPriceGlobal -= Math.floor(
         Number(productWithoutSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      finalPrice.textContent = FINAL_PRICE.toLocaleString();
-      withoutSale.textContent = OLD_PRICE.toLocaleString();
-      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+      finalPrice.textContent = finalPriceGlobal.toLocaleString();
+      withoutSale.textContent = oldPriceGlobal.toLocaleString();
+      sale.textContent = (
+        (oldPriceGlobal - finalPriceGlobal) *
+        -1
+      ).toLocaleString();
       itemsCount.textContent = (
         Number(itemsCount.textContent.replace(/[^0-9]/g, "")) -
         Number(productCount.textContent.replace(/[^0-9]/g, ""))

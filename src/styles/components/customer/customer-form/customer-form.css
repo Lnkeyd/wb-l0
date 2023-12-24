@@ -16,7 +16,7 @@
 }
 
 .customer-form__input {
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -51,7 +51,7 @@
   left: 0;
   color: var(--light-gray);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -67,7 +67,7 @@
   top: 45px;
   color: var(--orange);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -81,8 +81,8 @@
 /* ERROR END */
 
 .customer-form__line {
-  height: 0.9px;
-  margin-top: 2.2px;
+  height: 1px;
+  margin-top: 2px;
   background-color: var(--line-input);
 }
 
@@ -91,7 +91,7 @@
   top: 45px;
 
   color: var(--black);
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

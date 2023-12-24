@@ -15,10 +15,10 @@ export function sameDateCheck(checkbox) {
 
   const lastSameDateProduct = productItemCount[productItemCount.length - 1];
 
-  if (productCountNumber > 184) {
+  if (productCountNumber > MAX_PRODUCT_COUNT) {
     if (productItemCount.length > 1) {
       // Обновляем стейт только последнего элемента
-      lastSameDateProduct.textContent = productCountNumber - 184;
+      lastSameDateProduct.textContent = productCountNumber - MAX_PRODUCT_COUNT;
     } else {
       const newDateProductItem =
         lastSameDateProduct.parentElement.cloneNode(true);
@@ -29,7 +29,7 @@ export function sameDateCheck(checkbox) {
       if (existedNewDate) {
         existedNewDate.lastElementChild.append(newDateProductItem);
         newDateProductItem.lastElementChild.textContent =
-          productCountNumber - 184;
+          productCountNumber - MAX_PRODUCT_COUNT;
       } else {
         const newDate = document.createElement('div')
         newDate.classList.add('delivery-products-same-date')
@@ -56,7 +56,7 @@ export function sameDateCheck(checkbox) {
                 <div
                 class="delivery-products-item__count product-item-count-2"
                 >
-                ${productCountNumber - 184}
+                ${productCountNumber - MAX_PRODUCT_COUNT}
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export function sameDateCheck(checkbox) {
         oldDate.after(newDate);
       }
     }
-  } else if (productCountNumber === 184) {
+  } else if (productCountNumber === MAX_PRODUCT_COUNT) {
     // Удаляем последний элемент той же даты из DOM
     const sameDateItems = lastSameDateProduct.closest(
       ".delivery-products-items"
@@ -82,7 +82,7 @@ export function sameDateCheck(checkbox) {
     }
 
     productItemCount[0].textContent = productCount.textContent;
-  } else if (productCountNumber < 184) {
+  } else if (productCountNumber < MAX_PRODUCT_COUNT) {
     productItemCount[0].textContent = productCount.textContent;
   }
 

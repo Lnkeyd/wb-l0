@@ -9,7 +9,7 @@
 .checkout-with-sale__value {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -27,7 +27,7 @@
 .checkout-delivery__value {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

@@ -1,6 +1,7 @@
-var FINAL_PRICE = 2101063;
-var OLD_PRICE = 2302048;
+var finalPriceGlobal = 2101063;
+var oldPriceGlobal = 2302048;
 var PRICE_CURR = "сом";
+var MAX_PRODUCT_COUNT = 184
 
 var FORM_DATA = {
   name: {

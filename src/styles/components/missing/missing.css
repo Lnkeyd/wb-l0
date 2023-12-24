@@ -10,13 +10,17 @@
 
   color: var(--text-black, #000);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
 
   margin-bottom: 17px;
+}
+
+.missing-container.extra-margin-applied {
+  margin-top: 25px;
 }
 
 .missing-item-description > div {
@@ -87,6 +91,7 @@
 
   .missing-item-description > .product-description__title {
     width: 310px;
+    margin-top: 3px;
   }
 
   .product-buttons-wrap.missing-item-buttons-wrap {
@@ -101,6 +106,6 @@
 
 @media screen and (min-width: 1400px) {
   .missing {
-    margin-top: 0;
+    margin-top: -8px;
   }
 }

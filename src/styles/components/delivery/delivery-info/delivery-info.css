@@ -9,7 +9,7 @@
 .delivery-info__text {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -35,7 +35,7 @@
 
   text-decoration: dashed;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -71,7 +71,7 @@
 
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

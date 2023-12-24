@@ -17,7 +17,7 @@
     margin-top: -4px;
     margin-left: 16px;
     color: var(--system-white, #fff);
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -59,7 +59,7 @@
     position: relative;
     width: 100%;
     padding-left: 32px;
-    padding-right: 32.5px;
+    padding-right: 33px;
   }
 
   .desktop-header-search::after {
@@ -83,7 +83,7 @@
     background: rgba(255, 255, 255, 0.2);
 
     color: var(--white);
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -96,7 +96,7 @@
   .desktop-header-search__input::placeholder {
     color: var(--white);
     opacity: 0.5;
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -135,9 +135,9 @@
 
   .desktop-header-nav__item>span {
     position: absolute;
-    top: -7.6px;
-    right: 5.5px;
-    padding: 2.2px 5px;
+    top: -7px;
+    right: 5px;
+    padding: 2px 5px;
 
     height: 16px;
     min-width: 12px;
@@ -145,7 +145,7 @@
     justify-content: center;
     align-items: center;
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
@@ -163,7 +163,7 @@
   .desktop-header-nav__label {
     color: var(--white);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 13px;
     font-style: normal;
     font-weight: 400;

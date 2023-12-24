@@ -23,7 +23,7 @@
 
 .mobile-cart.cart-count {
   position: absolute;
-  top: -2.6px;
+  top: -3px;
   right: -6px;
 
   padding: 0 5px;
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 10px;
   font-style: normal;
   font-weight: 700;

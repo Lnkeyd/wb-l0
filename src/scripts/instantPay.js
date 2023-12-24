@@ -11,7 +11,7 @@ payCheckbox.addEventListener('change', () => {
     if (payCheckbox.checked) {
         console.log('Checked1')
         payDescription.style = 'display: none;'
-        payButton.textContent = `Оплатить ${FINAL_PRICE.toLocaleString()} ${finalPriceCurr.textContent}`
+        payButton.textContent = `Оплатить ${finalPriceGlobal.toLocaleString()} ${finalPriceCurr.textContent}`
     } else {
         console.log('NOT Checked1')
         payDescription.style = 'display: block;'

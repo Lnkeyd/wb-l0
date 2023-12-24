@@ -28,7 +28,7 @@ const paymentAsideChangeButton = document.querySelector(
     scrollY = window.scrollY;
 
     document.querySelector("body").classList.add("modal_active");
-    document.body.style.position = "fixed";
+    // document.body.style.position = "fixed";
 
     document
       .querySelector(".modal-delivery")
@@ -37,7 +37,7 @@ const paymentAsideChangeButton = document.querySelector(
 });
 
 deliveryModalClose.addEventListener("click", (e) => {
-  document.body.style.position = "static";
+  // document.body.style.position = "static";
   document.body.classList.remove("modal_active");
   document
     .querySelector(".modal-delivery")
@@ -47,7 +47,7 @@ deliveryModalClose.addEventListener("click", (e) => {
 });
 
 deliverySubmit.addEventListener("click", (e) => {
-  document.body.style.position = "static";
+  // document.body.style.position = "static";
   document.body.classList.remove("modal_active");
   document
     .querySelector(".modal-delivery")
@@ -62,7 +62,7 @@ deliverySubmit.addEventListener("click", (e) => {
     scrollY = window.scrollY;
 
     document.querySelector("body").classList.add("modal_active");
-    document.body.style.position = "fixed";
+    // document.body.style.position = "fixed";
 
     document
       .querySelector(".modal-payment")
@@ -71,7 +71,7 @@ deliverySubmit.addEventListener("click", (e) => {
 });
 
 paymentModalClose.addEventListener("click", (e) => {
-  document.body.style.position = "static";
+  // document.body.style.position = "static";
   document.body.classList.remove("modal_active");
   document
     .querySelector(".modal-payment")
@@ -83,7 +83,7 @@ paymentModalClose.addEventListener("click", (e) => {
 const paymentSubmit = document.querySelector(".modal-payment-submit");
 
 paymentSubmit.addEventListener("click", (e) => {
-  document.body.style.position = "static";
+  // document.body.style.position = "static";
   document.body.classList.remove("modal_active");
   document
     .querySelector(".modal-payment")
@@ -160,4 +160,5 @@ pointButton.addEventListener("click", () => {
     .classList.remove("modal-delivery-courier-items_active");
 
   document.querySelector(".delivery-point__title").textContent = "Пункт выдачи";
+  document.querySelector('.checkout-point-header__title').textContent = "Доставка в пункт выдачи"
 });

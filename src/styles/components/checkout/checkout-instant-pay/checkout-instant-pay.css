@@ -19,7 +19,7 @@
 
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -30,7 +30,7 @@
 .checkout-instant-pay__description {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

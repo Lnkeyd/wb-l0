@@ -2,7 +2,7 @@
   display: flex;
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -43,11 +43,11 @@
   border-radius: 16px;
   background: var(--orange);
 
-  right: -2.6px;
+  right: -3px;
   top: -8px;
 
   color: var(--white);
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 10px;
   font-style: normal;
   font-weight: 600;

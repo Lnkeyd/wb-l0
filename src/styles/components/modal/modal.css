@@ -16,7 +16,7 @@
 .modal-payment_active,
 .modal-delivery_active {
   height: 100dvh;
-  width: 100%;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@
 
   color: var(--white, #fff);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -133,13 +133,14 @@
 }
 
 @media screen and (min-width: 1024px) {
-  body.modal_active .black-blur {
+  .modal_active >.black-blur {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    transform: scaleX(2.5);
     background-color: rgba(5, 0, 10, 0.3);
   }
 

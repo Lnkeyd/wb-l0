@@ -22,7 +22,7 @@ export function updateInstantPayButton() {
   const payButton = document.querySelector(".instant-pay__button");
 
   if (payCheckbox.checked) {
-    payButton.textContent = `Оплатить ${FINAL_PRICE.toLocaleString()} ${PRICE_CURR}`;
+    payButton.textContent = `Оплатить ${finalPriceGlobal.toLocaleString()} ${PRICE_CURR}`;
   }
 }
 
@@ -30,7 +30,7 @@ export function updateTitlePrice() {
   const titlePriceValue = document.querySelector(
     ".cart-container-title__price-value"
   );
-  titlePriceValue.textContent = FINAL_PRICE.toLocaleString();
+  titlePriceValue.textContent = finalPriceGlobal.toLocaleString();
 }
 
 plus.forEach((item) =>
@@ -87,22 +87,22 @@ plus.forEach((item) =>
       itemsCount.textContent = Number(itemsCount.textContent) + 1;
 
       // ВСЯ цена БЕЗ скидки (В Итого)
-      OLD_PRICE = Math.floor(
+      oldPriceGlobal = Math.floor(
         Number(oldPriceItemValue) / value +
           Number(withoutSale.textContent.replace(/[^0-9]/g, ""))
       );
 
-      withoutSale.textContent = OLD_PRICE.toLocaleString();
+      withoutSale.textContent = oldPriceGlobal.toLocaleString();
 
       // ВСЯ цена со скидкой (В Итого)
-      FINAL_PRICE = Math.floor(
+      finalPriceGlobal = Math.floor(
         Number(finalPrice.textContent.replace(/[^0-9]/g, "")) +
           Number(newPriceItemValue) / value
       );
 
-      finalPrice.textContent = FINAL_PRICE.toLocaleString();
+      finalPrice.textContent = finalPriceGlobal.toLocaleString();
 
-      sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+      sale.textContent = ((oldPriceGlobal - finalPriceGlobal) * -1).toLocaleString();
 
       // Если чекбокс "Оплатить сразу" прожат
       updateInstantPayButton();
@@ -178,23 +178,23 @@ minus.forEach((item) =>
 
         // ВСЯ цена БЕЗ скидки (В Итого)
 
-        OLD_PRICE = Math.floor(
+        oldPriceGlobal = Math.floor(
           Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
             Number(oldPriceItemValue) / value
         );
 
-        withoutSale.textContent = OLD_PRICE.toLocaleString();
+        withoutSale.textContent = oldPriceGlobal.toLocaleString();
 
         // ВСЯ цена со скидкой (В Итого)
 
-        FINAL_PRICE = Math.floor(
+        finalPriceGlobal = Math.floor(
           Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
             Number(newPriceItemValue) / value
         );
 
-        finalPrice.textContent = FINAL_PRICE.toLocaleString();
+        finalPrice.textContent = finalPriceGlobal.toLocaleString();
 
-        sale.textContent = ((OLD_PRICE - FINAL_PRICE) * -1).toLocaleString();
+        sale.textContent = ((oldPriceGlobal - finalPriceGlobal) * -1).toLocaleString();
 
         // Если чекбокс "Оплатить сразу" прожат
         updateInstantPayButton();

@@ -65,7 +65,7 @@
 
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -83,7 +83,7 @@
 
   margin-top: 1px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -98,7 +98,7 @@
 
   text-decoration: dashed;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -156,7 +156,7 @@
 .product__price__sale-title {
   color: var(--gray);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -166,7 +166,7 @@
 .product__price__sale-value {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -187,7 +187,7 @@
 
   margin-top: 2px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -203,7 +203,7 @@
   color: var(--black);
   margin-top: 7px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -215,7 +215,7 @@
 
   margin-top: 7px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -269,7 +269,7 @@
 
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -281,7 +281,7 @@
 
   margin-left: 16px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -376,7 +376,7 @@
 
     color: var(--text-black, #000);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -399,7 +399,7 @@
   .product-description-company__text {
     color: var(--gray);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -442,7 +442,7 @@
   .product-description-company-popup__title {
     color: var(--black);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -452,7 +452,7 @@
   .product-description-company-popup__reg {
     color: var(--black);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -462,7 +462,7 @@
   .product-description-company-popup__address {
     color: var(--black);
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -470,7 +470,7 @@
   }
 
   .product-description-company__info > img {
-    margin-left: 7.5px;
+    margin-left: 8px;
     margin-top: 2px;
   }
 
@@ -514,7 +514,7 @@
 
     text-align: right;
 
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -534,7 +534,7 @@
   }
 
   .product__price-currency {
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

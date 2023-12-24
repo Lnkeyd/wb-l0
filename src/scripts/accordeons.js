@@ -18,13 +18,15 @@ cartButton.addEventListener("click", () => {
   accordeonTitle.classList.toggle("cart-container-title_active");
 });
 
+// TODO: Добавить класс cart__button_opened
+
 missingButton.addEventListener("click", () => {
   missingProducts.forEach((product) => {
     product.classList.toggle("product_hidden");
-    deliverySection.style.marginTop =
-      deliverySection.style.marginTop === "42px" ? "" : "42px";
-    missingContainer.style.marginTop =
-      missingContainer.style.marginTop === "25px" ? "43px" : "25px";
   });
+
+  deliverySection.classList.toggle('extra-margin-applied')
+  missingContainer.classList.toggle('extra-margin-applied')
+
   missingButton.classList.toggle("accordeon_reversed");
 });

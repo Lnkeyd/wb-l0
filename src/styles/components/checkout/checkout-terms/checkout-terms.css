@@ -8,7 +8,7 @@
   color: var(--black);
   margin-left: 8px;
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -16,7 +16,7 @@
 }
 
 .checkout-terms-links > * {
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

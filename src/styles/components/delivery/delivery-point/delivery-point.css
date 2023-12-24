@@ -1,7 +1,7 @@
 .delivery-point__title {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -13,7 +13,7 @@
 .delivery-point__address {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -36,7 +36,7 @@
 .delivery-point-info__rating {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +48,7 @@
 .delivery-point-info-scedule {
   color: var(--black);
 
-  font-family: Segoe UI;
+  font-family: "Segoe UI";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

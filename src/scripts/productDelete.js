@@ -82,18 +82,18 @@ deleteProductButtons.forEach((item) =>
 
     if (checkbox.checked) {
       // ИТОГО со скидкой
-      FINAL_PRICE =
+      finalPriceGlobal =
         Number(finalPrice.textContent.replace(/[^0-9]/g, "")) -
         Number(productPrice.textContent.replace(/[^0-9]/g, ""));
 
-      finalPrice.textContent = FINAL_PRICE.toLocaleString();
+      finalPrice.textContent = finalPriceGlobal.toLocaleString();
 
       // ИТОГО БЕЗ скидки
-      OLD_PRICE =
+      oldPriceGlobal =
         Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
         Number(productOldPrice.textContent.replace(/[^0-9]/g, ""));
 
-      withoutSale.textContent = OLD_PRICE.toLocaleString();
+      withoutSale.textContent = oldPriceGlobal.toLocaleString();
 
       sale.textContent = (
         (Number(withoutSale.textContent.replace(/[^0-9]/g, "")) -
