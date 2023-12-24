@@ -9,8 +9,7 @@ export class ProductList {
   init() {
     this.productList.forEach((item) => {
       const $product = document.createElement("div");
-      $product.classList.add("product");
-      $product.classList.add("cart-product");
+      $product.classList.add("product", "cart-product");
       $product.id = `cart-product-${item.id}`;
 
       this.root.appendChild($product)
@@ -19,6 +18,4 @@ export class ProductList {
       productComp.render();
     });
   }
-
-
 }
